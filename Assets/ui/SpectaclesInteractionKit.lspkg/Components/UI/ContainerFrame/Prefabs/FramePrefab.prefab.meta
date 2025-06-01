@@ -1,0 +1,82 @@
+- !<AssetImportMetadata/1af5fe44-d1c7-d3ef-358c-1c296024f864>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> a7325aa1-0905-4805-bef2-43a6bd491445
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> a7325aa1-0905-4805-bef2-43a6bd491445
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 9cf156a6-615d-4107-87c7-df2a9a54d666
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<SceneObject/112779f5-2ba3-4d11-b25a-d961caf14a92>
+  PrefabRemaps:
+    []
+  Name: FramePrefab
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 887a479e-23cb-4451-997e-521a3f28924f
+    - !<own> f6f5d969-7192-43c9-8d63-72d34d95755e
+- !<ColliderComponent/887a479e-23cb-4451-997e-521a3f28924f>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Box>
+    Size: {x: 1.000000, y: 1.000000, z: 0.050000}
+    FitVisual: false
+  ForceCompound: false
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  ShowCollider: false
+  Intangible: false
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/9cf156a6-615d-4107-87c7-df2a9a54d666>
+  SourceRemaps:
+    - 5b497b0d-71e5-49f7-b327-8d8535d5c549: 887a479e-23cb-4451-997e-521a3f28924f
+    - 5cfa03ca-5298-43a3-8411-9ff634a58d9d: f6f5d969-7192-43c9-8d63-72d34d95755e
+    - 67fc3ed9-c1b8-4c9e-adeb-ee8b011617c2: 112779f5-2ba3-4d11-b25a-d961caf14a92
+  SourceState: !<own> f14c1387-f42e-4d39-b2a7-6f07b2f81c3f
+- !<ObjectPrefab/f14c1387-f42e-4d39-b2a7-6f07b2f81c3f>
+  PackagePath: ""
+  objects:
+    - !<own> 112779f5-2ba3-4d11-b25a-d961caf14a92
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/f6f5d969-7192-43c9-8d63-72d34d95755e>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 77fd9eb6-f587-4a2f-9246-4839d0a46c5d
+  Mesh: !<reference> 6fef3f06-b8ad-4b82-bb6d-08e5486f9eb1
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

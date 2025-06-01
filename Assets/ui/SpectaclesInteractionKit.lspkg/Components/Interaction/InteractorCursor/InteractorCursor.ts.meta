@@ -1,0 +1,49 @@
+- !<AssetImportMetadata/a1871aa5-49e5-4eb6-4bab-ace47350fd20>
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9ea42c47-e133-45c8-a4d7-9f7b5dea3db6
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9ea42c47-e133-45c8-a4d7-9f7b5dea3db6
+  PackageType: NotAPackage
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8a387ce7-4157-4643-9b68-21a65e6b8057
+  PackagePolicy: CannotBeUnpacked
+  DependentFiles:
+    []
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/8a387ce7-4157-4643-9b68-21a65e6b8057>
+  Icon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c99c5886-b550-4cff-98ce-d19b5696d183
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    _interactor: false
+    enableCursorHolding: false
+    enableFilter: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - enableCursorHolding: true
+      enableFilter: false
+      _interactor: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input bool enableCursorHolding = true {"hint":"Controls the \"stickiness\" of the cursor when hovering over interactable objects. When enabled, the cursor maintains its position on the target object, even when the hand moves slightly, making interaction with small targets easier. Only applies to hand-based interactions, not other input types like mouse. Disable for immediate 1:1 cursor movement that follows the hand position exactly."}'
+    - '// @input bool enableFilter {"hint":"Applies smoothing to cursor movement for hand-based interactions. When enabled, reduces jitter and makes cursor motion appear more stable, improving precision when interacting with small targets. Only applies to hand-based interactions."}'
+    - "// @input Component.ScriptComponent _interactor {\"hint\":\"Reference to the component that this cursor will visualize. The cursor will update its position and appearance based on the interactor's state.\"}"
+  SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

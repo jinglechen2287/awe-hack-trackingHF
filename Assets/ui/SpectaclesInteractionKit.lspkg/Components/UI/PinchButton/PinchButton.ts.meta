@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/58fd0e39-eb15-4681-3e40-65903980a280>
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> af489ab2-e0f7-4711-8635-3f27f0752998
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> af489ab2-e0f7-4711-8635-3f27f0752998
+  PackageType: NotAPackage
+  AssetDataMap:
+    TypeScriptAsset: !<own> 15a7ecaf-726d-4600-b884-4cd08894ea63
+  PackagePolicy: CannotBeUnpacked
+  DependentFiles:
+    []
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/15a7ecaf-726d-4600-b884-4cd08894ea63>
+  Icon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: bc4cc45a-9e9e-4805-ae25-b77c360f76af
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    customFunctionForOnButtonPinched: false
+    editEventCallbacks: false
+    onButtonPinchedFunctionNames: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - editEventCallbacks: false
+      customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onButtonPinchedFunctionNames: !<string[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input bool editEventCallbacks {\"hint\":\"Enable this to add functions from another script to this component's pinch callback events.\"}"
+    - '// @ui {"widget":"group_start", "label":"On Button Pinched Callbacks", "showIf":"editEventCallbacks"}'
+    - '// @input Component.ScriptComponent customFunctionForOnButtonPinched {"hint":"The script containing functions to be called when button is pinched. Functions can accept an InteractorEvent parameter (optional)."}'
+    - '// @input string[] onButtonPinchedFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on button pinch. Functions can accept an InteractorEvent parameter (optional)."}'
+    - '// @ui {"widget":"group_end"}'
+  SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
