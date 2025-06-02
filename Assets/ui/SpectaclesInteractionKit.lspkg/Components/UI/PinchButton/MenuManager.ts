@@ -77,6 +77,9 @@ export class MenuManager extends BaseScriptComponent {
         });
       });
     }
+
+    // Show quest menu by default
+    this.showOnlyMenu(this.questMenu);
   }
 
   private showOnlyMenu(menuToShow: SceneObject): void {
