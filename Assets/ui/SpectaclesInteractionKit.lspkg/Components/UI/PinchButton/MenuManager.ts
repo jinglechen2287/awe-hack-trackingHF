@@ -24,6 +24,9 @@ export class MenuManager extends BaseScriptComponent {
   @input
   questMenu: SceneObject;
 
+  @input idleButtonMaterials: Material[];
+  @input activeButtonMaterials: Material[];
+
   onAwake(): void {
     // Attach quest button listeners
     this.questButtons.forEach((buttonObj, index) => {
@@ -48,7 +51,7 @@ export class MenuManager extends BaseScriptComponent {
       this.createEvent("OnStartEvent").bind(() => {
         ingredientInteractable.onTriggerEnd.add((event: InteractorEvent) => {
           if (this.enabled) {
-            this.showOnlyMenu(this.ingredientMenu);
+            this.setIngredientMenuActive()
           }
         });
       });
@@ -60,7 +63,7 @@ export class MenuManager extends BaseScriptComponent {
       this.createEvent("OnStartEvent").bind(() => {
         potionInteractable.onTriggerEnd.add((event: InteractorEvent) => {
           if (this.enabled) {
-            this.showOnlyMenu(this.potionMenu);
+            this.setPosionMenuActive()
           }
         });
       });
@@ -72,14 +75,35 @@ export class MenuManager extends BaseScriptComponent {
       this.createEvent("OnStartEvent").bind(() => {
         questInteractable.onTriggerEnd.add((event: InteractorEvent) => {
           if (this.enabled) {
-            this.showOnlyMenu(this.questMenu);
+            this.setQuestMenuActive();
           }
         });
       });
     }
 
     // Show quest menu by default
+    this.setQuestMenuActive();
+  }
+
+  private setQuestMenuActive(): void {
     this.showOnlyMenu(this.questMenu);
+    this.setButtonMaterial(this.ingredientButton, this.idleButtonMaterials);
+    this.setButtonMaterial(this.questButton, this.activeButtonMaterials);
+    this.setButtonMaterial(this.potionButton, this.idleButtonMaterials);
+  }
+
+  private setIngredientMenuActive(): void {
+    this.showOnlyMenu(this.ingredientMenu);
+    this.setButtonMaterial(this.ingredientButton, this.activeButtonMaterials);
+    this.setButtonMaterial(this.questButton, this.idleButtonMaterials);
+    this.setButtonMaterial(this.potionButton, this.idleButtonMaterials);
+  }
+
+  private setPosionMenuActive(): void {
+    this.showOnlyMenu(this.potionMenu);
+    this.setButtonMaterial(this.ingredientButton, this.idleButtonMaterials);
+    this.setButtonMaterial(this.questButton, this.idleButtonMaterials);
+    this.setButtonMaterial(this.potionButton, this.activeButtonMaterials);
   }
 
   private showOnlyMenu(menuToShow: SceneObject): void {
@@ -89,5 +113,17 @@ export class MenuManager extends BaseScriptComponent {
     if (this.questMenu) this.questMenu.enabled = false;
 
     if (menuToShow) menuToShow.enabled = true;
+  }
+
+  private setButtonMaterial(button: SceneObject, materials: Material[]): void {
+    const buttonMesh = button.children.find((child) => child.name === 'Button Mesh')
+    if (!buttonMesh) {
+        print(`${button.name} doesn't have Button Mesh`)
+    }
+    const renderMeshVisual = buttonMesh.getComponent('RenderMeshVisual')
+    if (!renderMeshVisual) {
+        print(`${button.name} Button Mesh doesn't have renderMeshVisual`)
+    }
+    renderMeshVisual.materials = materials
   }
 }

@@ -28,6 +28,8 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    activeButtonMaterials: false
+    idleButtonMaterials: false
     ingredientButton: false
     ingredientMenu: false
     potionButton: false
@@ -51,6 +53,10 @@
       potionMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       questButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       questMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      idleButtonMaterials: !<reference.Material[]>
+        []
+      activeButtonMaterials: !<reference.Material[]>
+        []
   ScriptTypes:
     -
       {}
@@ -63,3 +69,5 @@
     - // @input SceneObject potionMenu
     - // @input SceneObject questButton
     - // @input SceneObject questMenu
+    - "// @input Asset.Material[] idleButtonMaterials"
+    - "// @input Asset.Material[] activeButtonMaterials"
