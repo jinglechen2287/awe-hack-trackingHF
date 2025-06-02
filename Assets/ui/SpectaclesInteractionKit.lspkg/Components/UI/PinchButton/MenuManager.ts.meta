@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/0509a41a-deb0-47c9-bebe-95167e7dfc24>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6b2d5568-1ffc-4dfa-b477-2873fe868f16
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6b2d5568-1ffc-4dfa-b477-2873fe868f16
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> cb7cb342-a4c7-42a3-af12-bfc13912c715
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/cb7cb342-a4c7-42a3-af12-bfc13912c715>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d51b77ba-0a67-474d-abc4-b122f85a8011
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    ingredientButton: false
+    ingredientMenu: false
+    potionButton: false
+    potionMenu: false
+    questButton: false
+    questButtons: false
+    questMenu: false
+    questMenus: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - questButtons: !<reference.SceneObject[]>
+        []
+      questMenus: !<reference.SceneObject[]>
+        []
+      ingredientButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ingredientMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      potionButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      potionMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      questButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      questMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input SceneObject[] questButtons"
+    - "// @input SceneObject[] questMenus"
+    - // @input SceneObject ingredientButton
+    - // @input SceneObject ingredientMenu
+    - // @input SceneObject potionButton
+    - // @input SceneObject potionMenu
+    - // @input SceneObject questButton
+    - // @input SceneObject questMenu
