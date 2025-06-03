@@ -1,0 +1,194 @@
+- !<Material/56c8beaf-47ff-4736-b8e1-2e3507dc96f3>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> eb2404c9-dc76-49cb-a9a0-948396cc3f68
+- !<PassInfo/eb2404c9-dc76-49cb-a9a0-948396cc3f68>
+  CachedProperties:
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - baseTexBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - baseTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - baseTexUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - mainColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - materialParamsTexBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - materialParamsTexDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - materialParamsTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - materialParamsTexUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - normalTexBorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - normalTexDims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - normalTexTransform:
+        typeIdx: 7
+        value:
+          0: {x: 1.000000, y: 0.000000, z: 0.000000}
+          1: {x: 0.000000, y: 1.000000, z: 0.000000}
+          2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - normalTexUvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
+    - uv2Offset:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - uv2Scale:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+    - uv3Offset:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - uv3Scale:
+        typeIdx: 3
+        value: {x: 1.000000, y: 1.000000}
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    - ENABLE_BASE_TEX
+    - ENABLE_DIFFUSE_LIGHTING
+    - ENABLE_DIRECT_LIGHTS
+    - ENABLE_ENVMAP
+    - ENABLE_LIGHTING
+    - ENABLE_NORMALMAP
+    - ENABLE_SPECULAR_LIGHTING
+    - ENABLE_TONE_MAPPING
+    - baseTexUV 0
+    - emissiveTexUV 0
+    - materialParamsTexUV 0
+    - normalTexUV 0
+    - opacityTexUV 0
+    - rimColorTexUV 0
+    - uv2 0
+    - uv3 0
+    - NODE_13_DROPLIST_ITEM 0
+    - NODE_181_DROPLIST_ITEM 0
+    - NODE_184_DROPLIST_ITEM 0
+    - NODE_221_DROPLIST_ITEM 0
+    - NODE_228_DROPLIST_ITEM 0
+    - NODE_27_DROPLIST_ITEM 0
+    - NODE_315_DROPLIST_ITEM 0
+    - NODE_38_DROPLIST_ITEM 0
+    - NODE_49_DROPLIST_ITEM 0
+    - NODE_69_DROPLIST_ITEM 0
+    - NODE_76_DROPLIST_ITEM 0
+  BlendMode: Disabled
+  Properties:
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    baseColor:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    baseTex:
+      typeIdx: 9
+      value:
+        id: 98ab3d0d-59fb-449b-9565-df6e06c936c5
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: true
+        type: Texture2D
+    materialParamsTex:
+      typeIdx: 9
+      value:
+        id: 11f846a6-54c5-4ca0-8db0-a3ad7b94304b
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: true
+        type: Texture2D
+    metallic:
+      typeIdx: 1
+      value: 0.000000
+    normalTex:
+      typeIdx: 9
+      value:
+        id: 9d784709-308a-405f-a8da-ef4cd0590910
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: true
+        type: Texture2D
+    roughness:
+      typeIdx: 1
+      value: 0.000000
+  Pass: !<reference> 95f5a128-f6de-40c6-8091-24a53d10296e
