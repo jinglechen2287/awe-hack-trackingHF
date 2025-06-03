@@ -10671,8 +10671,7 @@
   Enabled: true
   ScriptAsset: !<reference> 6b2d5568-1ffc-4dfa-b477-2873fe868f16
   ScriptInputsDefault:
-    idleButtonMaterials: true
-    activeButtonMaterials: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -10690,9 +10689,9 @@
       questButton: !<reference.SceneObject> 69f22622-1c53-4463-bcef-2b557cfee87b
       questMenu: !<reference.SceneObject> 129ffdc5-b701-4b39-aa48-64d49f1d6193
       idleButtonMaterials: !<reference.Material[]>
-        []
+        - !<reference> 7b4b9cea-ed98-4be8-935a-5021c1011214
       activeButtonMaterials: !<reference.Material[]>
-        []
+        - !<reference> d847673e-59e3-489d-9c87-292a4046be7f
   ScriptTypes:
     "":
       {}
@@ -13925,9 +13924,9 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: -1.000000
+    left: -2.000000
     bottom: -1.000000
-    right: 1.000000
+    right: 2.000000
     top: 1.000000
   Offset:
     left: 0.000000
