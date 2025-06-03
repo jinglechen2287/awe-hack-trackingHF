@@ -5,6 +5,5 @@ export class HeadSynchronizationInput extends BaseScriptComponent {
 
   // Input property representing the scene object to be synchronized with the hand
   @input
-  readonly questHint: SceneObject
-
+  readonly headBox: SceneObject
 }

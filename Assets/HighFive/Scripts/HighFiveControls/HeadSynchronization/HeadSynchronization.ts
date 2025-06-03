@@ -3,45 +3,46 @@ import {RealtimeStoreKeys} from "../SyncControls/RealtimeStoreKeys"
 import {SessionController} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
 
-// The HeadSynchronization class synchronizes the position of a virtual questHint with the user's head/camera movements in real time.
-// It tracks the head's movements, updates the questHint's position accordingly within the scene,
+// The HeadSynchronization class synchronizes the position of a virtual headBox with the user's head/camera movements in real time.
+// It tracks the head's movements, updates the headBox's position accordingly within the scene,
 // and handles events triggered by changes in head positioning.
 export class HeadSynchronization {
 
   // Array to store callbacks that handle head position changes
   private readonly onUserChangedHeadPosition: ((value: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA) => void) [] = []
 
-  // Reference to the head/camera (using SIK or similar API)
+  // Reference to the head/camera
   private readonly head: WorldCameraFinderProvider
 
-  // The questHint object in the scene that follows the head
-  private readonly questHint: SceneObject
+  // The headBox object in the scene that follows the head
+  private readonly headBox: SceneObject
 
-  // Transform component for the questHint, used to dynamically update its position based on the head's movement
-  private readonly questHintTransform: Transform
+  // Transform component for the headBox, used to dynamically update its position based on the head's movement
+  private readonly headBoxTransform: Transform
 
   // Stores the last updated head position data
   private _lastUpdatedData: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA
 
   constructor(private readonly input: HeadSynchronizationInput) {
-    // Initialize the head using SIK framework (assuming getHead() or similar exists)
+    // Initialize the head using SIK framework
     this.head = WorldCameraFinderProvider.getInstance()
 
-    // Create a copy of the questHint hierarchy for manipulation
-    this.questHint = this.input.questHint.getParent().copyWholeHierarchy(this.input.questHint)
+    // Create a copy of the headBox hierarchy for manipulation
+    this.headBox = this.input.headBox.getParent().copyWholeHierarchy(this.input.headBox)
 
-    // Store the questHint's transform component for position manipulation
-    this.questHintTransform = this.questHint.getTransform()
+    // Store the headBox's transform component for position manipulation
+    this.headBoxTransform = this.headBox.getTransform()
 
     // TODO: Double Check this
-    // Initially disable the questHint as the head is not yet tracked
-    // this.questHint.enabled = false
+    // Initially disable the headBox as the head is not yet tracked
+    this.headBox.enabled = false
   }
 
   // Starts the synchronization by initializing data and binding update events
   start() {
     this._lastUpdatedData = this.defaultData()
-    this.putquestHintOnHead()
+    this.putheadBoxOnHead()
+    print('Tracking head start')
   }
 
   // Allows external subscriptions to head position changes
@@ -54,18 +55,20 @@ export class HeadSynchronization {
     return this._lastUpdatedData
   }
 
-  // Binds an event to update the questHint's position, aligning it with the center of the head
-  private putquestHintOnHead() {
+  // Binds an event to update the headBox's position, aligning it with the center of the head
+  private putheadBoxOnHead() {
     const updateEvent = this.input.createEvent("UpdateEvent")
     updateEvent.bind(() => {
         // TODO: Double check if the if statement is necessary
       if (!this.head) {
-        this.questHint.enabled = false
+        print('no world cam')
+        this.headBox.enabled = false
         return
       }
-      this.questHint.enabled = true
-      const pos = this.head.getWorldPosition()
-      this.questHintTransform.setWorldPosition(pos)
+      this.headBox.enabled = true
+      let pos = this.head.getWorldPosition()
+      pos.z -= 20
+      this.headBoxTransform.setWorldPosition(pos)
       this.updateHeadDataWithDelay()
     })
   }
@@ -85,7 +88,7 @@ export class HeadSynchronization {
   private updateHeadDataWithDelay() {
     const delay = this.input.createEvent("DelayedCallbackEvent")
     delay.bind(() => {
-      this.updateHeadPositionData(this.questHintTransform.getLocalPosition())
+      this.updateHeadPositionData(this.headBoxTransform.getLocalPosition())
     })
     delay.reset(0.05)
   }

@@ -78,6 +78,7 @@ export class HandSynchronization {
       const pos = this.rightHand.getPalmCenter()
       this.boxTransform.setWorldPosition(pos)
       this.updateHandDataWithDelay()
+      print('hand tracking')
     })
   }
 

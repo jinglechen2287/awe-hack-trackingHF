@@ -23,6 +23,7 @@ export class EntryPointMain extends BaseScriptComponent {
   @input
   readonly highFiveControllerInput: HighFiveControllerInput
 
+  @input questHint: Text
   // Instance of HandSynchronization, responsible for handling hand/head synchronization logic
   private handSynchronization: HandSynchronization
   private headSynchronization: HeadSynchronization
@@ -41,7 +42,7 @@ export class EntryPointMain extends BaseScriptComponent {
     this.headSynchronization = new HeadSynchronization(this.headSynchronizationInput)
     
 
-    this.highFiveController = new HighFiveController(this.highFiveControllerInput, this.headSynchronizationInput.questHint.getComponent('Text'))
+    this.highFiveController = new HighFiveController(this.highFiveControllerInput, this.questHint)
 
     this.dataSynchronizationController = new DataSynchronizationController(
         this.handSynchronization,

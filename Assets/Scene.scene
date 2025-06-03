@@ -2,6 +2,7 @@
   PackagePath: ""
   objects:
     - !<own> 9d7b2a29-61a7-47b8-98f4-402275febb64
+    - !<own> 6c03e998-e777-4971-b06e-a417a992b36a
     - !<own> 61e1e434-36b1-401b-a685-df7ae62e4c55
     - !<own> 0e6c6bb2-bce0-43b0-b025-367dfaf1f57d
     - !<own> 9a00d80b-1e65-452e-ae9d-0d589d0397f2
@@ -1870,6 +1871,34 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/230b0dab-5177-4cea-8815-a717f18cd9f9>
+  PrefabRemaps:
+    []
+  Name: SyncTransform
+  Enabled: true
+  ScriptAsset: !<reference> ad871be2-7a9b-4a8a-b756-241e842dec50
+  ScriptInputsDefault:
+    networkIdTypeString: true
+    customNetworkId: true
+    persistenceString: true
+    sendsPerSecondLimit: true
+    interpolationTarget: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      networkIdTypeString: objectId
+      customNetworkId: enter_unique_id
+      positionSyncString: Location
+      rotationSyncString: Location
+      scaleSyncString: Location
+      persistenceString: Session
+      sendsPerSecondLimit: 10
+      useSmoothing: false
+      interpolationTarget: -0.250000
+  ScriptTypes:
+    "":
+      {}
 - !<Text/23bacee9-8783-4351-842d-99cab947d1ad>
   PrefabRemaps:
     []
@@ -2861,6 +2890,32 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/30afea68-96ff-4ecc-9066-3d845290ac62>
+  PrefabRemaps:
+    []
+  Name: Billboard
+  Enabled: true
+  ScriptAsset: !<reference> 74eafc23-e98b-4073-ab18-82ca532994e3
+  ScriptInputsDefault:
+    _xAxisEnabled: true
+    _yAxisEnabled: true
+    _zAxisEnabled: true
+    _axisBufferDegrees: true
+    _axisEasing: true
+    duration: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _xAxisEnabled: false
+      _yAxisEnabled: true
+      _zAxisEnabled: false
+      _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      _axisEasing: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      duration: 0.033000
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/30b60fbd-6636-4562-9ea6-fca5c5b71bc0>
   PrefabRemaps:
     []
@@ -5839,6 +5894,22 @@
     - !<own> 400231b1-387c-4fb6-8fa8-845b9ccc5381
   Components:
     []
+- !<SceneObject/61634faa-33da-4d09-b582-28bcf2bebf04>
+  PrefabRemaps:
+    []
+  Name: Box 1
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 230b0dab-5177-4cea-8815-a717f18cd9f9
+    - !<own> e5ad9aaf-66a5-43fb-b96e-9bcc0eff1e9c
 - !<SceneObject/61e1e434-36b1-401b-a685-df7ae62e4c55>
   PrefabRemaps:
     []
@@ -6526,13 +6597,13 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 40.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     - !<own> b786b462-4ba2-436a-82e3-ad996cf6985c
-    - !<own> 6c03e998-e777-4971-b06e-a417a992b36a
+    - !<own> 61634faa-33da-4d09-b582-28bcf2bebf04
   Components:
     []
 - !<Text/6ba40e52-cc21-4024-a109-833e54ad6b4e>
@@ -6694,7 +6765,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -25.000000}
+    position: {x: 0.000000, y: -20.000000, z: -200.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -6702,6 +6773,7 @@
     []
   Components:
     - !<own> 47c02881-bc01-4589-bdbd-838165dbfb28
+    - !<own> 30afea68-96ff-4ecc-9066-3d845290ac62
 - !<SceneObject/6c0c0db5-b212-48d5-a53d-e93525c471e0>
   PrefabRemaps:
     []
@@ -7715,7 +7787,7 @@
     {}
   ScriptInputs:
     "":
-      questHint: !<reference.SceneObject> 6c03e998-e777-4971-b06e-a417a992b36a
+      headBox: !<reference.SceneObject> 61634faa-33da-4d09-b582-28bcf2bebf04
   ScriptTypes:
     "":
       {}
@@ -10908,7 +10980,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 40.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -12694,7 +12766,7 @@
   PrefabRemaps:
     []
   Name: Box
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -13320,7 +13392,7 @@
     - fef5e4dd-a9ef-4686-ac45-556cc4b9eeb2: 94247da3-fdd5-42c1-b81b-7efd3d2cd6f1
     - ff34fa55-f00b-4b85-8609-2e4d2cea5a3c: 65eb0f56-d633-4e4c-ae32-ba738c757232
   Name: SingleplayerUI
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -100.000000}
@@ -14629,6 +14701,7 @@
       handSynchronizationInput: !<MappingBased.AssignableType> 56ab003f-9d1e-49c9-bf60-0628519f3c6f
       headSynchronizationInput: !<MappingBased.AssignableType_1> 79dcbb9b-fc33-4898-b296-ba644336281e
       highFiveControllerInput: !<MappingBased.AssignableType_2> 33ca2a81-0cae-476d-b918-1b92a4358ad7
+      questHint: !<reference.Text> 47c02881-bc01-4589-bdbd-838165dbfb28
   ScriptTypes:
     "":
       {}
@@ -16700,6 +16773,26 @@
   ScriptTypes:
     "":
       {}
+- !<RenderMeshVisual/e5ad9aaf-66a5-43fb-b96e-9bcc0eff1e9c>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<ScreenTransform/e5c20fe5-f794-4d38-a073-bb48fdf72fa5>
   PrefabRemaps:
     []
