@@ -122,6 +122,9 @@ export class HighFiveController {
   private onUpdate = (): void => {
     // Assuming only need to update 1 friend's head pos
     for (let friend of this.friendsHeadInfo) {
+        if (!this.input.head.enabled) {
+            this.input.head.enabled = true
+        }
         this.input.head.getTransform().setWorldPosition(this.getUserHeadPosition(friend))
     }
     if (!this.currentUserHandInfo || !this.currentUserHandInfo.isActive) {

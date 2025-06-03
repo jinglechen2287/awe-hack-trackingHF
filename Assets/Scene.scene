@@ -4,7 +4,6 @@
     - !<own> 9d7b2a29-61a7-47b8-98f4-402275febb64
     - !<own> 6c03e998-e777-4971-b06e-a417a992b36a
     - !<own> a85fe695-d6c1-4ff1-bcfe-fdf1d61206a3
-    - !<own> 137858f9-8667-4d6d-a4d6-c00231e5e944
     - !<own> 61e1e434-36b1-401b-a685-df7ae62e4c55
     - !<own> 0e6c6bb2-bce0-43b0-b025-367dfaf1f57d
     - !<own> 9a00d80b-1e65-452e-ae9d-0d589d0397f2
@@ -1894,7 +1893,7 @@
     - 07f307dc-ca38-4047-aca4-4b405233f534: 2a41939b-2c40-47c1-b87c-ebf4ba7bb82f
     - 137858f9-8667-4d6d-a4d6-c00231e5e944: 8dcb6991-3ea8-4004-86fd-12ecda561520
     - 922abc9c-9703-4c99-b81d-8a0221c47444: f8cbd0bb-89a1-40e0-ac15-25f9abde56a8
-  Name: Head
+  Name: Attached to Cam (ignore)
   Enabled: false
   Layers: 1
   LocalTransform:
@@ -5123,11 +5122,11 @@
     - ad648619-3e47-4adc-96b2-72bca5984da5: ad4716b7-9b58-42ea-b130-d35dd98fd85f
     - cbd24d9f-cb16-4d1a-9f46-236423bec2e6: ee175cbe-c629-47bf-8ef5-542d72854bba
     - e6249e10-31aa-42c9-aa81-f93e639b6015: d537e6a4-2050-4d3e-a29e-e19232d1156d
-  Name: BoxTest
-  Enabled: true
+  Name: "Attaching on Other User's Head"
+  Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 20.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 30.000000, y: 30.000000, z: 30.000000}
     hasSegmentScaleCompensation: false
@@ -11666,6 +11665,7 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
+    - !<own> 137858f9-8667-4d6d-a4d6-c00231e5e944
     - !<own> 0ac9f5e8-7926-4f54-a3c6-2898d38c881e
     - !<own> b786b462-4ba2-436a-82e3-ad996cf6985c
   Components:
@@ -16252,7 +16252,7 @@
   PrefabRemaps:
     []
   Name: Render Mesh Visual
-  Enabled: true
+  Enabled: false
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -19949,7 +19949,7 @@
   PrefabRemaps:
     []
   Name: Instantiator
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
