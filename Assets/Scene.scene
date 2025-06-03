@@ -2,7 +2,6 @@
   PackagePath: ""
   objects:
     - !<own> 9d7b2a29-61a7-47b8-98f4-402275febb64
-    - !<own> 6c03e998-e777-4971-b06e-a417a992b36a
     - !<own> 61e1e434-36b1-401b-a685-df7ae62e4c55
     - !<own> 0e6c6bb2-bce0-43b0-b025-367dfaf1f57d
     - !<own> 9a00d80b-1e65-452e-ae9d-0d589d0397f2
@@ -4053,6 +4052,21 @@
     - !<own> 2dfbb470-5c32-4f9e-bd73-f05d869e3f27
   Components:
     []
+- !<SceneObject/43a57087-11dc-4c63-bec1-1df4131d1826>
+  PrefabRemaps:
+    []
+  Name: HeadSynchronizationInput
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 79dcbb9b-fc33-4898-b296-ba644336281e
 - !<SceneObject/442ac98f-50b5-4df1-b10a-4ec97d21db51>
   PrefabRemaps:
     []
@@ -6518,6 +6532,7 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> b786b462-4ba2-436a-82e3-ad996cf6985c
+    - !<own> 6c03e998-e777-4971-b06e-a417a992b36a
   Components:
     []
 - !<Text/6ba40e52-cc21-4024-a109-833e54ad6b4e>
@@ -6679,8 +6694,8 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: -25.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -6956,6 +6971,7 @@
     - !<own> ea6eb4d9-ce5c-4a28-94c0-aabfcc37c585
     - !<own> fb976789-5da0-470d-9d20-6aa1bb9c7f8d
     - !<own> e3fe2690-1a15-4285-9622-fc00477294b6
+    - !<own> 43a57087-11dc-4c63-bec1-1df4131d1826
     - !<own> 7be0c74d-36d1-4f74-b3a3-8a0e31d3134d
     - !<own> 132c7964-a36d-4f2c-b30e-3032c08d3706
   Components:
@@ -7687,6 +7703,22 @@
     - !<own> 5810f0ed-0eed-47a9-8380-eb525fe9ccd3
   Components:
     []
+- !<ScriptComponent/79dcbb9b-fc33-4898-b296-ba644336281e>
+  PrefabRemaps:
+    []
+  Name: HeadSynchronizationInput
+  Enabled: true
+  ScriptAsset: !<reference> f4b25331-4b69-43ac-868b-365655ddd3fb
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      questHint: !<reference.SceneObject> 6c03e998-e777-4971-b06e-a417a992b36a
+  ScriptTypes:
+    "":
+      {}
 - !<Image/7a08db50-bc3e-4bc4-b611-56436763dbea>
   PrefabRemaps:
     []
@@ -12666,7 +12698,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -14595,8 +14627,8 @@
   ScriptInputs:
     "":
       handSynchronizationInput: !<MappingBased.AssignableType> 56ab003f-9d1e-49c9-bf60-0628519f3c6f
-      highFiveControllerInput: !<MappingBased.AssignableType_1> 33ca2a81-0cae-476d-b918-1b92a4358ad7
-      questHint: !<reference.Text> 47c02881-bc01-4589-bdbd-838165dbfb28
+      headSynchronizationInput: !<MappingBased.AssignableType_1> 79dcbb9b-fc33-4898-b296-ba644336281e
+      highFiveControllerInput: !<MappingBased.AssignableType_2> 33ca2a81-0cae-476d-b918-1b92a4358ad7
   ScriptTypes:
     "":
       {}

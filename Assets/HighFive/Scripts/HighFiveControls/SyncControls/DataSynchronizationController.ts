@@ -2,6 +2,7 @@ import {
   RealtimeStoreKeys
 } from "./RealtimeStoreKeys"
 import {HandSynchronization} from "../HandSynchronization/HandSynchronization"
+import { HeadSynchronization } from "../HeadSynchronization/HeadSynchronization"
 import {HighFiveController} from "../HighFiveController/HighFiveController"
 import {
   SessionController
@@ -21,6 +22,7 @@ export class DataSynchronizationController {
   private isNewStoreCreated: boolean = false
 
   constructor(private readonly handSynchronization: HandSynchronization,
+    private readonly headSynchronization: HeadSynchronization,
               private readonly highFiveController: HighFiveController) {}
 
   // Method to start the synchronization process
@@ -41,9 +43,11 @@ export class DataSynchronizationController {
         })
       }
 
-      // Store current user's hand position data
+      // Store current user's hand/head position data
       this.realtimeStore.putString(RealtimeStoreKeys.getCurrentUserHandPositionKey(),
         JSON.stringify(this.handSynchronization.lastUpdatedData))
+        this.realtimeStore.putString(RealtimeStoreKeys.getCurrentUserHeadPositionKey(),
+        JSON.stringify(this.headSynchronization.lastUpdatedData))
 
       // Update high-five controller with current user's hand position
       this.highFiveController.currentUserHandInfoUpdated(this.handSynchronization.lastUpdatedData)
@@ -51,10 +55,13 @@ export class DataSynchronizationController {
       // Subscribe to updates from the real-time store
       SessionController.getInstance().onRealtimeStoreUpdated.add(this.onRealtimeStoreUpdated)
 
-      // Handle changes in hand position
+      // Handle changes in hand/head position
       this.handSynchronization.subscribeOnChanges((data: RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA) => {
         this.highFiveController.currentUserHandInfoUpdated(data)
         this.realtimeStore.putString(RealtimeStoreKeys.getCurrentUserHandPositionKey(), JSON.stringify(data))
+      })
+      this.headSynchronization.subscribeOnChanges((data: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA) => {
+        this.realtimeStore.putString(RealtimeStoreKeys.getCurrentUserHeadPositionKey(), JSON.stringify(data))
       })
 
       // Handle user disconnections

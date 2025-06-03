@@ -45,7 +45,7 @@ export class EntryPointMain extends BaseScriptComponent {
 
     this.dataSynchronizationController = new DataSynchronizationController(
         this.handSynchronization,
-        // continue here
+        this.headSynchronization,
         this.highFiveController
     )
 
@@ -59,6 +59,7 @@ export class EntryPointMain extends BaseScriptComponent {
   // Private method to start hands and data synchronization and high-five interactions
   private onStart() {
     this.handSynchronization.start()
+    this.headSynchronization.start()
     this.highFiveController.start()
     this.dataSynchronizationController.start()
   }
