@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/b321f6ce-46f7-be87-e7dd-2ea0d8360684>
+- !<AssetImportMetadata/2e36a6eb-7507-45db-8909-74f93e365307>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 86047827-f5b4-42d2-85d4-24ec207026a5
+    TypeScriptAsset: !<reference> 03c019f5-435e-4686-9760-a49e84406037
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 86047827-f5b4-42d2-85d4-24ec207026a5
+  PrimaryAsset: !<reference> 03c019f5-435e-4686-9760-a49e84406037
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> 6e40ebb9-c938-488f-b301-d90792b1251f
+    TypeScriptAsset: !<own> 49b683f9-2f8b-4b2b-ae67-3cc923dee922
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/6e40ebb9-c938-488f-b301-d90792b1251f>
+- !<TypeScriptAssetData/49b683f9-2f8b-4b2b-ae67-3cc923dee922>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -28,20 +28,16 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    ingredientNumbers: false
-    ingredientObjects: false
+    potionObjects: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - ingredientObjects: !<reference.SceneObject[]>
-        []
-      ingredientNumbers: !<float[]>
+    - potionObjects: !<reference.SceneObject[]>
         []
   ScriptTypes:
     -
       {}
   InputLines:
-    - "// @input SceneObject[] ingredientObjects"
-    - "// @input float[] ingredientNumbers"
+    - "// @input SceneObject[] potionObjects"
