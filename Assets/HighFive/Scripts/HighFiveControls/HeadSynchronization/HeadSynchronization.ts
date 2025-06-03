@@ -28,7 +28,7 @@ export class HeadSynchronization {
     this.head = WorldCameraFinderProvider.getInstance()
 
     // Create a copy of the headBox hierarchy for manipulation
-    this.headBox = this.input.headBox.getParent().copyWholeHierarchy(this.input.headBox)
+    this.headBox = this.input.headBox
 
     // Store the headBox's transform component for position manipulation
     this.headBoxTransform = this.headBox.getTransform()

@@ -9,4 +9,5 @@ export class HighFiveControllerInput extends BaseScriptComponent {
   @input
   readonly bubbleAnimationControllerInput: BubbleAnimationControllerInput
 
+  @input head: SceneObject
 }

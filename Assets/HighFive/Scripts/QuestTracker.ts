@@ -41,7 +41,6 @@ class Quest {
 
   addApprovals(player: string): [boolean, string?] {
     if (this._approvals.includes(player)){
-        print('include')
         return [false, 'prevent adding the same person twice']
     }
     if (this.numOfApproval <= this._goal) {
