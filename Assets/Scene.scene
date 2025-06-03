@@ -2,6 +2,7 @@
   PackagePath: ""
   objects:
     - !<own> 9d7b2a29-61a7-47b8-98f4-402275febb64
+    - !<own> 6c03e998-e777-4971-b06e-a417a992b36a
     - !<own> 61e1e434-36b1-401b-a685-df7ae62e4c55
     - !<own> 0e6c6bb2-bce0-43b0-b025-367dfaf1f57d
     - !<own> 9a00d80b-1e65-452e-ae9d-0d589d0397f2
@@ -293,7 +294,7 @@
   PrefabRemaps:
     []
   Name: Head Binding
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -303,7 +304,6 @@
   Children:
     - !<own> b7a8e6f3-346e-4c1e-bbfe-bcfbd4952f9f
     - !<own> c086eebd-63ad-4fe0-a117-53339c046433
-    - !<own> 6c03e998-e777-4971-b06e-a417a992b36a
   Components:
     - !<own> 1c5c7dd2-705f-460e-bbc3-4e3f8f91bb40
 - !<SceneObject/04fc0bed-4458-407b-b1c3-769d719f30e5>
@@ -6509,7 +6509,7 @@
   PrefabRemaps:
     []
   Name: EnableOnReady
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 40.000000}
@@ -6679,8 +6679,8 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 17.313713, z: 9.129730}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -12665,7 +12665,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -12673,6 +12673,7 @@
     []
   Components:
     - !<own> ddf73171-8381-44ad-9c81-1ad0fa66f16d
+    - !<own> e14f10cc-9ca5-43a8-8e24-703a84c10ac7
 - !<SceneObject/b7a1fd24-39e3-4295-8467-11a3f196f72b>
   PrefabRemaps:
     []
@@ -16001,6 +16002,26 @@
     []
   Components:
     []
+- !<RenderMeshVisual/e14f10cc-9ca5-43a8-8e24-703a84c10ac7>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<ScriptComponent/e181611c-580c-4245-81b4-418496ca4f7b>
   PrefabRemaps:
     []
