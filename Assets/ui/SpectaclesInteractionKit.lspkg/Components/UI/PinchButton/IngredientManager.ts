@@ -32,7 +32,16 @@ export class IngredientManager extends BaseScriptComponent {
     }
   }
 
-  setIngredientNumber(index: number, value: number): void {
+  public getIngredientNumber(index: number): number {
+    if (index < 0 || index >= this.ingredientNumbers.length) {
+      print("Invalid ingredient index.");
+      return -1;
+    }
+
+    return this.ingredientNumbers[index];
+  }
+
+  public setIngredientNumber(index: number, value: number): void {
     if (index < 0 || index >= this.ingredientNumbers.length) {
       print("Invalid ingredient index.");
       return;
