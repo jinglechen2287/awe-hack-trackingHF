@@ -1,9 +1,9 @@
 export type Status = "idle" | "active" | "complete";
 
-class Quest {
+export class Quest {
   private readonly _name: string;
   private readonly _goal: number;
-  private readonly _reward: string; // Might need a reward object in the future
+  private readonly _reward: string; // Might need a reward object?
   private _approvals: string[];
   private _status: Status;
 
@@ -55,16 +55,12 @@ class Quest {
   }
 }
 
-export class Quests {
-  private quests: Quest[];
+export class QuestSystem {
+  private acceptedQuests: Quest[];
   private questHint: Text;
 
   constructor(questHint: Text) {
-    this.quests = [];
-
-    // Adding a quest for debugging
-    let debugQuest = new Quest("Debug Quest", 3);
-    this.addQuest(debugQuest);
+    this.acceptedQuests = [];
 
     this.questHint = questHint;
     this.updateQuestHint();
@@ -84,7 +80,6 @@ export class Quests {
   }
 
   updateText(hasActiveQuest: boolean): void {
-    // this.questHint.text = newText;
     if(hasActiveQuest) {
         this.questHint.text = `${this.activeQuest.name} (${this.activeQuest.numOfApproval} / ${this.activeQuest.goal})`
     } else {
@@ -94,38 +89,40 @@ export class Quests {
   }
 
   addQuest(quest: Quest): void {
+    print('add quest')
     if (!this.activeQuest) {
       quest.status = "active";
     }
-    this.quests.push(quest);
+    this.acceptedQuests.push(quest);
+    this.updateQuestHint();
   }
 
   removeQuest(name: string): boolean {
-    const index = this.quests.findIndex((q) => q.name === name);
+    const index = this.acceptedQuests.findIndex((q) => q.name === name);
     if (index !== -1) {
-      this.quests.splice(index, 1);
+      this.acceptedQuests.splice(index, 1);
       return true;
     }
     return false;
   }
 
   getQuest(name: string): Quest | undefined {
-    return this.quests.find((q) => q.name === name);
+    return this.acceptedQuests.find((q) => q.name === name);
   }
 
   get allQuests(): Quest[] {
-    return this.quests;
+    return this.acceptedQuests;
   }
 
   get activeQuest(): Quest {
-    return this.quests.filter((q) => q.status === "active")[0];
+    return this.acceptedQuests.filter((q) => q.status === "active")[0];
   }
 
   get firstIdleQuest(): Quest {
-    return this.quests.filter((q) => q.status === "idle")[0];
+    return this.acceptedQuests.filter((q) => q.status === "idle")[0];
   }
 
   get completedQuests(): Quest[] {
-    return this.quests.filter((q) => q.status === "complete");
+    return this.acceptedQuests.filter((q) => q.status === "complete");
   }
 }

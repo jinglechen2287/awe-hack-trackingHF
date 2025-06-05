@@ -11,9 +11,8 @@ export class PotionManager extends BaseScriptComponent {
 
   onAwake(): void {
     // Initialize potionStates with the current active state of each potion
-    this.potionStates = this.potionObjects.map(obj => obj.enabled);
+    this.potionStates = this.potionObjects.map((obj) => obj.enabled);
     this.setPotionState(0, true);
-
   }
 
   togglePotion(index: number): void {
@@ -45,5 +44,4 @@ export class PotionManager extends BaseScriptComponent {
     }
     return this.potionStates[index];
   }
-    
 }

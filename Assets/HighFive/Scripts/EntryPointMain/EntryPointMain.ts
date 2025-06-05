@@ -25,14 +25,13 @@ export class EntryPointMain extends BaseScriptComponent {
   private handSynchronization: HandSynchronization
 
   // Instance of HighFiveController, responsible for handling high-five interactions
-  private highFiveController: HighFiveController
+  public highFiveController: HighFiveController
 
   // Instance of DataSynchronizationController, responsible for managing data synchronization between users
   private dataSynchronizationController: DataSynchronizationController
 
   // Lifecycle method called when the component is initialized
   onAwake() {
-
     // Initialize instances with the provided input
     this.handSynchronization = new HandSynchronization(this.handSynchronizationInput)
 

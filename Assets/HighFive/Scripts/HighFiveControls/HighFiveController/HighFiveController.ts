@@ -6,7 +6,7 @@ import { SIK } from "SpectaclesInteractionKit.lspkg/SIK";
 import { BubbleAnimationController } from "../BubbleAnimationController/BubbleAnimationController";
 import { SessionController } from "SpectaclesSyncKit.lspkg/Core/SessionController";
 
-import { Quests } from "../../QuestTracker";
+import { QuestSystem } from "../../QuestTracker";
 
 // The HighFiveController class is responsible for detecting and handling virtual high-five
 // interactions between users in a real-time environment.
@@ -14,7 +14,7 @@ import { Quests } from "../../QuestTracker";
 // and triggers animations when a high-five gesture is detected
 export class HighFiveController {
   // Object for keeping track of all the quests
-  private quests: Quests;
+  public quests: QuestSystem;
 
   // Controller for managing bubble animations during high-five interactions
   private readonly bubbleAnimationController: BubbleAnimationController;
@@ -43,7 +43,7 @@ export class HighFiveController {
     private readonly questHint: Text
   ) {
     // Initalize the quests
-    this.quests = new Quests(questHint);
+    this.quests = new QuestSystem(questHint);
 
     // Initialize the bubble animation controller
     this.bubbleAnimationController = new BubbleAnimationController(
@@ -152,6 +152,7 @@ export class HighFiveController {
   //   Handles approving quests
   private approveQuest(playerName: string): void {
     // FIXME: Need a better solution to handle this. This func is being called every frame rn when there is a highfive.
+    if (!this.quests.activeQuest) return;
     this.quests.activeQuest.addApprovals(playerName);
     this.quests.updateQuestHint();
   }

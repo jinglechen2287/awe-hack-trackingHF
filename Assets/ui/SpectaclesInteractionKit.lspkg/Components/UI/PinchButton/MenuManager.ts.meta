@@ -29,6 +29,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     activeButtonMaterials: false
+    highFiveEntryPoint: false
     idleButtonMaterials: false
     ingredientButton: false
     ingredientMenu: false
@@ -43,7 +44,8 @@
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - questButtons: !<reference.SceneObject[]>
+    - highFiveEntryPoint: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      questButtons: !<reference.SceneObject[]>
         []
       questMenus: !<reference.SceneObject[]>
         []
@@ -61,6 +63,7 @@
     -
       {}
   InputLines:
+    - // @input AssignableType highFiveEntryPoint
     - "// @input SceneObject[] questButtons"
     - "// @input SceneObject[] questMenus"
     - // @input SceneObject ingredientButton

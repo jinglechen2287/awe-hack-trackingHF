@@ -797,12 +797,14 @@
   Enabled: true
   ScriptAsset: !<reference> 6b2d5568-1ffc-4dfa-b477-2873fe868f16
   ScriptInputsDefault:
+    highFiveEntryPoint: true
     idleButtonMaterials: true
     activeButtonMaterials: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
+      highFiveEntryPoint: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       questButtons: !<reference.SceneObject[]>
         - !<reference> 90fc3af5-f2e1-4a6f-ad3c-3a1b428f84f9
       questMenus: !<reference.SceneObject[]>
