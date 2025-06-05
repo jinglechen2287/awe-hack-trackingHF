@@ -122,9 +122,12 @@ export class HighFiveController {
               friendName = user.displayName;
             }
           });
-        this.showBubbleAnimation(this.rightHand.getPalmCenter(), friendName);
-        // High Five Approves Quest
-        this.approveQuest(friendName);
+        if (this.quests.activeQuest) {
+          this.showBubbleAnimation(this.rightHand.getPalmCenter(), friendName);
+          // High Five Approves Quest
+          this.approveQuest(friendName);
+        }
+
         return;
       }
     }

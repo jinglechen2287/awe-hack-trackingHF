@@ -7,6 +7,7 @@
     - !<own> 9a00d80b-1e65-452e-ae9d-0d589d0397f2
     - !<own> af2ccc42-c772-45eb-8568-d488b7c4eac7
     - !<own> bc084825-b3d8-4469-8192-76d3080bdc0f
+    - !<own> 990fd354-e455-4866-a2e1-4a67c327dcb1
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -812,7 +813,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: -1.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 4.000000, y: 4.000000, z: 4.000000}
     hasSegmentScaleCompensation: false
@@ -1975,6 +1976,26 @@
   BlendShapes:
     X: 1.360000
     Y: 15.650000
+- !<RenderMeshVisual/22a680a2-51ba-4763-a046-c85edb6755de>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 1a0d62b9-4bdf-4964-8cf2-0204873858ad
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<RenderMeshVisual/22bb4681-0ba7-4c4d-b4eb-77e6aae599a4>
   PrefabRemaps:
     []
@@ -2565,6 +2586,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/2b90c20d-a581-4d8b-84d5-a7e165a71754>
+  PrefabRemaps:
+    []
+  Name: Box
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -1.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 22a680a2-51ba-4763-a046-c85edb6755de
 - !<SceneObject/2bd6207a-0ef2-43d3-8ac1-33ed40b1c776>
   PrefabRemaps:
     []
@@ -3922,6 +3958,48 @@
     - !<own> bd5fb96f-a61f-4a8e-837c-922934b956af
   Components:
     []
+- !<ScriptComponent/3b9bf71b-481a-4a60-8445-ec77d53cda24>
+  PrefabRemaps:
+    []
+  Name: Headlock
+  Enabled: true
+  ScriptAsset: !<reference> e9ef5b29-b7f3-4684-bf07-2d473fa9c81f
+  ScriptInputsDefault:
+    _distance: true
+    _xzEnabled: true
+    _xzEasing: true
+    _yEnabled: true
+    _yEasing: true
+    _translationBuffer: true
+    _lockedPitch: true
+    _pitchEasing: true
+    _pitchOffsetDegrees: true
+    _pitchBufferDegrees: true
+    _lockedYaw: true
+    _yawEasing: true
+    _yawOffsetDegrees: true
+    _yawBufferDegrees: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _distance: !<float> 50.000000
+      _xzEnabled: true
+      _xzEasing: !<float> 1.000000
+      _yEnabled: true
+      _yEasing: !<float> 1.000000
+      _translationBuffer: !<float> 0.000000
+      _lockedPitch: true
+      _pitchEasing: !<float> 1.000000
+      _pitchOffsetDegrees: !<float> 0.000000
+      _pitchBufferDegrees: !<float> 0.000000
+      _lockedYaw: true
+      _yawEasing: !<float> 1.000000
+      _yawOffsetDegrees: !<float> 0.000000
+      _yawBufferDegrees: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/3c915ee9-b6c0-4a34-a1d7-eb016a31bc7c>
   PrefabRemaps:
     []
@@ -4299,7 +4377,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    []
+    - !<reference> c71dde88-df6c-46a6-8426-d07b956a747e
   Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
@@ -10471,6 +10549,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/990fd354-e455-4866-a2e1-4a67c327dcb1>
+  PrefabRemaps:
+    []
+  Name: HeadLock Explore
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2b90c20d-a581-4d8b-84d5-a7e165a71754
+  Components:
+    - !<own> 3b9bf71b-481a-4a60-8445-ec77d53cda24
 - !<SceneObject/991dc035-f43a-4c62-bbe5-13a3b80bdf5b>
   PrefabRemaps:
     []
@@ -18139,7 +18232,7 @@
 - !<SceneObject/ebaf7536-4846-49db-88b3-077a81c48003>
   PrefabRemaps:
     []
-  Name: Ingredient
+  Name: IngredientContainer
   Enabled: true
   Layers: 1
   LocalTransform:

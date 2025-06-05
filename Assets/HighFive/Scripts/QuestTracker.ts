@@ -88,7 +88,7 @@ export class QuestSystem {
         this.questHint.text = `${this.activeQuest.name} (${this.activeQuest.numOfApproval} / ${this.activeQuest.goal})`
     } else {
         // this.questHint.enabled = false;
-        this.questHint.text = 'All quest completed'
+        this.questHint.text = 'No Active Quest'
     }
   }
 
