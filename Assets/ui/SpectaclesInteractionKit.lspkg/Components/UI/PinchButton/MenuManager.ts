@@ -32,7 +32,7 @@ export class MenuManager extends BaseScriptComponent {
   @input activeButtonMaterials: Material[];
 
   private allAvailableQuests: Quest[] = [
-    new Quest('Quest1', 2, 'reward1'),
+    new Quest('Quest1', 1, 'reward1'),
     new Quest('Quest2', 1, 'reward2'),
     new Quest('Quest3', 1, 'reward3'),
     new Quest('Quest4', 1, 'reward4'),
