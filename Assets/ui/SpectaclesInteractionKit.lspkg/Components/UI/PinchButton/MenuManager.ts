@@ -32,7 +32,7 @@ export class MenuManager extends BaseScriptComponent {
   @input activeButtonMaterials: Material[];
 
   private allAvailableQuests: Quest[] = [
-    new Quest('Quest1', 1, 'reward1'),
+    new Quest('Quest1', 2, 'reward1'),
     new Quest('Quest2', 1, 'reward2'),
     new Quest('Quest3', 1, 'reward3'),
     new Quest('Quest4', 1, 'reward4'),
@@ -72,6 +72,14 @@ export class MenuManager extends BaseScriptComponent {
             this.acceptQuest(index);
           }
         });
+
+        const questDescription = menuObj.getComponent('Text')
+        if (!questDescription) {
+            print(`No text component in questMenu[${index}]`)
+            return
+        }
+        const quest = this.allAvailableQuests[index]
+        questDescription.text = `Name: ${quest.name} \n Goal: ${quest.goal} \n Reward: ${quest.reward}`
       });
 
       // Setup listeners for view quest buttons
@@ -100,7 +108,8 @@ export class MenuManager extends BaseScriptComponent {
 
         const label = parentObj.getComponent('Text')
         if (!label) {
-            print(`No text component in questMenu[${index}]`)
+            print(`No text component on questButton parent at index[${index}]`)
+            return
         }
         label.text = this.allAvailableQuests[index].name
       });

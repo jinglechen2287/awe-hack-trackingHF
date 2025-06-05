@@ -35,6 +35,10 @@ export class Quest {
     return this._status;
   }
 
+  get reward(): string {
+    return this._reward;
+  }
+
   set status(newStatus: Status) {
     this._status = newStatus;
   }
