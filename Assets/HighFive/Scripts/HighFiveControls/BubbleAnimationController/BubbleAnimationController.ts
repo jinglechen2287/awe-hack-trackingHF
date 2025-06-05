@@ -1,6 +1,7 @@
 import {animateToAlpha, setAlpha} from "../../Utils/SharedFunctions"
 import animate from "SpectaclesInteractionKit.lspkg/Utils/animate"
 import {BubbleAnimationControllerInput} from "./BubbleAnimationControllerInput"
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
 
 // The BubbleAnimationController class manages the animations and visual effects for the bubble
 // that appears during a high-five interaction
@@ -15,24 +16,34 @@ export class BubbleAnimationController {
 
   private bubbleTransform: Transform
 
+  private bubblePopped = false
+
   // Initializes the bubble and sets initial properties
   constructor(private readonly input: BubbleAnimationControllerInput) {
     this.bubbleTransform = this.input.overallBubble.getTransform()
     this.input.overallBubble.enabled = false
     setAlpha(this.input.wasHighFiveText.getSceneObject(), 0)
+    const bubbleInteractable = this.input.overallBubble.getComponent(Interactable.getTypeName());
+    if (!bubbleInteractable) {
+        print('No interactable on bubble')
+    }
+    bubbleInteractable.onTriggerEnd.add(() => {
+        this.pop(() => {})
+    })
   }
 
   // Plays the bubble animation with a message and optional completion callback
   playBubbleAnimation(friendName: string, onComplete: () => void) {
     this.resetBubble()
     this.input.overallBubble.enabled = true
-    this.input.wasHighFiveText.text = "HIGH FIVE!\nfrom " + friendName
+    // this.input.wasHighFiveText.text = "HIGH FIVE!\nfrom " + friendName
+    this.input.wasHighFiveText.text = "Quest Completed!"
     this.initialize(this.pinchAnimation)
-    const del = this.input.createEvent("DelayedCallbackEvent")
-    del.bind(() => {
-      this.pop(onComplete)
-    })
-    del.reset(6)
+    // const del = this.input.createEvent("DelayedCallbackEvent")
+    // del.bind(() => {
+    //   this.pop(onComplete)
+    // })
+    // del.reset(6)
   }
 
   // Sets the position of the bubble in the scene
@@ -42,7 +53,8 @@ export class BubbleAnimationController {
 
   // Handles the popping animation of the bubble
   pop = (onComplete: () => void) => {
-
+    if (this.bubblePopped) return;
+    this.bubblePopped = true
     animate({
       update: (value: number) => {
         this.input.modelRim.mainPass["alpha"] = value
