@@ -1,6 +1,10 @@
 import { InteractorEvent } from "../../../Core/Interactor/InteractorEvent";
 import { Interactable } from "../../Interaction/Interactable/Interactable";
 
+// Jingle's NOTE: this component is not needed for showing effects
+// I'm handling showing effect in AppStateSync.ts 
+// (hard-coded and ugly but works)
+
 @component
 export class PotionManager extends BaseScriptComponent {
   @input

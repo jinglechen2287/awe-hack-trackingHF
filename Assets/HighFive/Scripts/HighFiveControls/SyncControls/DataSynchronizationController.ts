@@ -3,6 +3,7 @@ import { HandSynchronization } from "../HandSynchronization/HandSynchronization"
 import { HeadSynchronization } from "../HeadSynchronization/HeadSynchronization";
 import { HighFiveController } from "../HighFiveController/HighFiveController";
 import { SessionController } from "SpectaclesSyncKit.lspkg/Core/SessionController";
+import { AppStateSync } from "../AppStateSync/AppStateSync";
 
 // The DataSynchronizationController class is designed to manage the synchronization of
 // hand position data across multiple users in a collaborative environment
@@ -19,7 +20,8 @@ export class DataSynchronizationController {
   constructor(
     private readonly handSynchronization: HandSynchronization,
     private readonly headSynchronization: HeadSynchronization,
-    private readonly highFiveController: HighFiveController
+    private readonly highFiveController: HighFiveController,
+    private readonly appState: AppStateSync
   ) {}
 
   // Method to start the synchronization process
@@ -31,21 +33,29 @@ export class DataSynchronizationController {
         SessionController.getInstance()
           .getSession()
           .activeUsersInfo.forEach((value) => {
-            const key = RealtimeStoreKeys.getHandPositionKey(value);
-            if (this.realtimeStore.has(key)) {
+            const handKey = RealtimeStoreKeys.getHandPositionKey(value);
+            if (this.realtimeStore.has(handKey)) {
               const data: RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA =
                 JSON.parse(
-                  this.realtimeStore.getString(key)
+                  this.realtimeStore.getString(handKey)
                 ) as RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA;
               this.highFiveController.friendsHandInfoUpdated(data);
             }
-            const key2 = RealtimeStoreKeys.getHeadPositionKey(value);
-            if (this.realtimeStore.has(key2)) {
+            const headKey = RealtimeStoreKeys.getHeadPositionKey(value);
+            if (this.realtimeStore.has(headKey)) {
               const data: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA =
                 JSON.parse(
-                  this.realtimeStore.getString(key2)
+                  this.realtimeStore.getString(headKey)
                 ) as RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA;
               this.highFiveController.friendsHeadInfoUpdated(data);
+            }
+
+            const stateKey = RealtimeStoreKeys.getAppStateKey(value);
+            if (this.realtimeStore.has(headKey)) {
+              const data: RealtimeStoreKeys.APP_STATE_DATA = JSON.parse(
+                this.realtimeStore.getString(stateKey)
+              ) as RealtimeStoreKeys.APP_STATE_DATA;
+              this.highFiveController.friendAppStateHandler(data);
             }
           });
       }
@@ -58,6 +68,12 @@ export class DataSynchronizationController {
       this.realtimeStore.putString(
         RealtimeStoreKeys.getCurrentUserHeadPositionKey(),
         JSON.stringify(this.headSynchronization.lastUpdatedData)
+      );
+
+      // Store current user's app state data
+      this.realtimeStore.putString(
+        RealtimeStoreKeys.getCurrentUserAppStateKey(),
+        JSON.stringify(this.appState.lastUpdatedData)
       );
 
       // Update high-five controller with current user's hand/head position
@@ -84,6 +100,16 @@ export class DataSynchronizationController {
         (data: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA) => {
           this.realtimeStore.putString(
             RealtimeStoreKeys.getCurrentUserHeadPositionKey(),
+            JSON.stringify(data)
+          );
+        }
+      );
+      // Handle changes in app state
+      this.appState.subscribeOnChanges(
+        (data: RealtimeStoreKeys.APP_STATE_DATA) => {
+            print('appstate change')
+          this.realtimeStore.putString(
+            RealtimeStoreKeys.getCurrentUserAppStateKey(),
             JSON.stringify(data)
           );
         }
@@ -162,7 +188,7 @@ export class DataSynchronizationController {
         updatedData
       ) as RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA;
       this.highFiveController.friendsHeadInfoUpdated(data);
-    } else {
+    } else if (key.includes("HAND")) {
       // Retrieve and process updated data
       const updatedData = this.realtimeStore.getString(key);
       if (updatedData.length === 0) {
@@ -172,6 +198,16 @@ export class DataSynchronizationController {
         updatedData
       ) as RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA;
       this.highFiveController.friendsHandInfoUpdated(data);
+    } else {
+        print(key)
+      const updatedData = this.realtimeStore.getString(key);
+      if (updatedData.length === 0) {
+        return;
+      }
+      const data: RealtimeStoreKeys.APP_STATE_DATA = JSON.parse(
+        updatedData
+      ) as RealtimeStoreKeys.APP_STATE_DATA;
+      this.highFiveController.friendAppStateHandler(data);
     }
   };
 }

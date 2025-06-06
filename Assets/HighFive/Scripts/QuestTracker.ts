@@ -61,16 +61,16 @@ export class Quest {
 
 export class QuestSystem {
   private acceptedQuests: Quest[];
-  private questHint: Text;
+//   private _questMsg: string;
+private updateAppStateMsg: (text: string) => void
 
-  constructor(questHint: Text) {
+  constructor(updateAppStateMsg: (text: string) => void) {
+    this.updateAppStateMsg = updateAppStateMsg
     this.acceptedQuests = [];
-
-    this.questHint = questHint;
-    this.updateQuestHint();
+    this.updateQuestMsg();
   }
 
-  updateQuestHint(): void {
+  updateQuestMsg(): void {
     if (this.activeQuest) {
       this.updateText(true);
     } else {
@@ -85,10 +85,10 @@ export class QuestSystem {
 
   updateText(hasActiveQuest: boolean): void {
     if(hasActiveQuest) {
-        this.questHint.text = `${this.activeQuest.name} (${this.activeQuest.numOfApproval} / ${this.activeQuest.goal})`
+        this.updateAppStateMsg(`${this.activeQuest.name} (${this.activeQuest.numOfApproval} / ${this.activeQuest.goal})`)
     } else {
         // this.questHint.enabled = false;
-        this.questHint.text = 'No Active Quest'
+        this.updateAppStateMsg('')
     }
   }
 
@@ -98,7 +98,7 @@ export class QuestSystem {
       quest.status = "active";
     }
     this.acceptedQuests.push(quest);
-    this.updateQuestHint();
+    this.updateQuestMsg();
   }
 
   removeQuest(name: string): boolean {
@@ -129,4 +129,8 @@ export class QuestSystem {
   get completedQuests(): Quest[] {
     return this.acceptedQuests.filter((q) => q.status === "complete");
   }
+
+//   get questMsg(): string {
+//     return this._questMsg
+//   }
 }

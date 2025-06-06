@@ -40,12 +40,17 @@ export class HighFiveController {
   // Flag indicating whether the bubble animation is finished
   private isBubbleAnimationFinished: boolean = true;
 
+//   Store App States Info
+  private currentUserAppState: RealtimeStoreKeys.APP_STATE_DATA;
+  private friendAppState: RealtimeStoreKeys.APP_STATE_DATA;
+
   constructor(
     private readonly input: HighFiveControllerInput,
-    private readonly questHint: Text
+    private questText: Text, private friendEffect: SceneObject,
+    updateMsg: (text: string) => void
   ) {
     // Initalize the quests
-    this.quests = new QuestSystem(questHint);
+    this.quests = new QuestSystem(updateMsg);
 
     // Initialize the bubble animation controller
     this.bubbleAnimationController = new BubbleAnimationController(
@@ -95,6 +100,9 @@ export class HighFiveController {
         friend.x = value.x;
         friend.y = value.y;
         friend.z = value.z;
+        friend.xRot = value.xRot;
+        friend.yRot = value.yRot;
+        friend.zRot = value.zRot;
         return;
       }
     }
@@ -119,9 +127,17 @@ export class HighFiveController {
       if (!this.input.head.enabled) {
         this.input.head.enabled = true;
       }
+      //   Set the Head Position
       this.input.head
         .getTransform()
         .setWorldPosition(this.getUserHeadPosition(friend));
+      //   Set the Head Rotation
+      const headRot = this.getUserHeadRotation(friend);
+      this.input.head
+        .getTransform()
+        .setLocalRotation(
+          quat.fromEulerVec(headRot)
+        );
     }
     if (!this.currentUserHandInfo || !this.currentUserHandInfo.isActive) {
       return;
@@ -169,6 +185,12 @@ export class HighFiveController {
     return new vec3(data.x, data.y, data.z);
   }
 
+  private getUserHeadRotation(
+    data: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA
+  ): vec3 {
+    return new vec3(data.xRot, data.yRot, data.zRot);
+  }
+
   // Displays a bubble animation when a high-five gesture is detected
   private showBubbleAnimation(handPos: vec3, friendName: string): void {
     if (!this.isBubbleAnimationFinished) {
@@ -186,7 +208,7 @@ export class HighFiveController {
     // FIXME: Need a better solution to handle this. This func is being called every frame rn when there is a highfive.
     if (!this.quests.activeQuest) return;
     this.quests.activeQuest.addApprovals(playerName);
-    this.quests.updateQuestHint();
+    this.quests.updateQuestMsg();
   }
 
   // Sets the position of the bubble animation relative to the world camera
@@ -194,5 +216,10 @@ export class HighFiveController {
     const head = this.worldCamera.getTransform().getWorldPosition();
     const dir = handPos.sub(head).normalize().uniformScale(15);
     this.bubbleAnimationController.setPosition(handPos.add(dir));
+  }
+
+friendAppStateHandler(value: RealtimeStoreKeys.APP_STATE_DATA): void {
+    this.questText.text = value.questText
+    this.friendEffect.enabled = value.showEffect
   }
 }

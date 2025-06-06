@@ -67,7 +67,9 @@ export class HeadSynchronization {
       this.headBox.enabled = true
       let pos = this.head.getWorldPosition()
       this.headBoxTransform.setWorldPosition(pos)
-      this.updateHeadDataWithDelay()
+      let rot = this.head.getWorldTransform().extractEulerAngles()
+      this.headBoxTransform.setWorldRotation(quat.fromEulerVec(rot))
+      this.updateHeadPositionData(this.headBoxTransform.getLocalPosition(), this.headBoxTransform.getLocalRotation().toEulerAngles())
     })
   }
 
@@ -78,26 +80,32 @@ export class HeadSynchronization {
       x: 0,
       y: 0,
       z: 0,
+      xRot: 0,
+      yRot: 0,
+      zRot: 0
     }
     return data
   }
 
   // Delays the update of head position data to prevent rapid changes
-  private updateHeadDataWithDelay() {
-    const delay = this.input.createEvent("DelayedCallbackEvent")
-    delay.bind(() => {
-      this.updateHeadPositionData(this.headBoxTransform.getLocalPosition())
-    })
-    delay.reset(0.05)
-  }
+//   private updateHeadDataWithDelay() {
+//     const delay = this.input.createEvent("DelayedCallbackEvent")
+//     delay.bind(() => {
+//       this.updateHeadPositionData(this.headBoxTransform.getLocalPosition(), this.headBoxTransform.getLocalRotation().toEulerAngles())
+//     })
+//     delay.reset(0.05)
+//   }
 
   // Updates the head position data and notifies subscribed callbacks
-  private updateHeadPositionData(pos: vec3) {
+  private updateHeadPositionData(pos: vec3, rot: vec3) {
     const data: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA = {
       connectionID: SessionController.getInstance().getLocalUserInfo().connectionId,
       x: pos.x,
       y: pos.y,
       z: pos.z,
+      xRot: rot.x,
+      yRot: rot.y,
+      zRot: rot.z,
     }
     this._lastUpdatedData = data
     this.onUserChangedHeadPosition.forEach(value => value(data))

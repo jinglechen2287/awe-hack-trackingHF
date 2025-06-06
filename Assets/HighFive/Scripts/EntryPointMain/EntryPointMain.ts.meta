@@ -26,6 +26,8 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    appStateSyncInput: false
+    friendEffect: false
     handSynchronizationInput: false
     headSynchronizationInput: false
     highFiveControllerInput: false
@@ -35,16 +37,20 @@
   DefaultScriptInputs:
     - handSynchronizationInput: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       headSynchronizationInput: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
-      highFiveControllerInput: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      appStateSyncInput: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      highFiveControllerInput: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
       questHint: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      friendEffect: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input AssignableType handSynchronizationInput
     - // @input AssignableType_1 headSynchronizationInput
-    - // @input AssignableType_2 highFiveControllerInput
+    - // @input AssignableType_2 appStateSyncInput
+    - // @input AssignableType_3 highFiveControllerInput
     - // @input Component.Text questHint
+    - // @input SceneObject friendEffect
   SetupScript:
     code: ""
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
