@@ -19,8 +19,10 @@ export class HighFiveController {
   // Controller for managing bubble animations during high-five interactions
   private readonly bubbleAnimationController: BubbleAnimationController;
 
-  // Stores information about friends' hand positions
+  // Stores information about friends' hand/head positions
   private readonly friendsHandsInfo: RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA[] =
+    [];
+  private readonly friendsHeadInfo: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA[] =
     [];
 
   // Event that updates hand positions and checks for high-five interactions
@@ -74,8 +76,8 @@ export class HighFiveController {
     this.currentUserHandInfo = value;
   }
 
-  // Updates or adds a friend's hand information
-  friendsInfoUpdated(value: RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA) {
+  // Updates or adds a friend's hand/head information
+  friendsHandInfoUpdated(value: RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA) {
     for (let friend of this.friendsHandsInfo) {
       if (friend.connectionID === value.connectionID) {
         friend.isActive = value.isActive;
@@ -86,6 +88,18 @@ export class HighFiveController {
       }
     }
     this.friendsHandsInfo.push(value);
+  }
+  friendsHeadInfoUpdated(value: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA) {
+    for (let friend of this.friendsHeadInfo) {
+      if (friend.connectionID === value.connectionID) {
+        friend.x = value.x;
+        friend.y = value.y;
+        friend.z = value.z;
+        return;
+      }
+    }
+    print("head update");
+    this.friendsHeadInfo.push(value);
   }
 
   // Removes a friend's hand information when they disconnect
@@ -100,6 +114,15 @@ export class HighFiveController {
 
   // Handles update logic to check for high-five conditions
   private onUpdate = (): void => {
+    // Assuming only need to update 1 friend's head pos
+    for (let friend of this.friendsHeadInfo) {
+      if (!this.input.head.enabled) {
+        this.input.head.enabled = true;
+      }
+      this.input.head
+        .getTransform()
+        .setWorldPosition(this.getUserHeadPosition(friend));
+    }
     if (!this.currentUserHandInfo || !this.currentUserHandInfo.isActive) {
       return;
     }
@@ -133,9 +156,15 @@ export class HighFiveController {
     }
   };
 
-  // Converts hand position data into a vec3 object for calculations
+  // Converts hand/head position data into a vec3 object for calculations
   private getUserHandPosition(
     data: RealtimeStoreKeys.HAND_LOCAL_POSITION_DATA
+  ): vec3 {
+    return new vec3(data.x, data.y, data.z);
+  }
+
+  private getUserHeadPosition(
+    data: RealtimeStoreKeys.HEAD_LOCAL_POSITION_DATA
   ): vec3 {
     return new vec3(data.x, data.y, data.z);
   }
