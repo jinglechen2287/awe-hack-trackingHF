@@ -8,6 +8,7 @@
     - !<own> af2ccc42-c772-45eb-8568-d488b7c4eac7
     - !<own> bc084825-b3d8-4469-8192-76d3080bdc0f
     - !<own> 990fd354-e455-4866-a2e1-4a67c327dcb1
+    - !<own> 63aa5768-d21e-41f9-98de-d6f95a1dd2df
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -1903,7 +1904,7 @@
   Name: Located At
   Enabled: true
   Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-  Location: !<reference> 00000000-0000-0000-0000-000000000000
+  Location: !<reference> 26791eb7-79a2-4a6f-98b8-05d965fb3b1f
 - !<SceneObject/2165ffe8-dfe8-4c59-97c9-71f02ca4cdff>
   PrefabRemaps:
     []
@@ -6699,6 +6700,21 @@
     []
   Components:
     - !<own> f9199eb1-a70c-4cf5-bb2c-31fcb79ff3d2
+- !<SceneObject/63aa5768-d21e-41f9-98de-d6f95a1dd2df>
+  PrefabRemaps:
+    []
+  Name: Custom Location
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 180.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d5439190-5dbe-48a8-b6f6-336e35cd93af
+  Components:
+    - !<own> 977ca10f-3b6d-4932-bf0c-b6dbf701afde
 - !<ScriptComponent/63cdfce9-5233-446c-919d-7141efbdbd96>
   PrefabRemaps:
     []
@@ -10966,6 +10982,13 @@
     []
   Components:
     - !<own> 5c8d10b3-dec5-4e2f-a0d8-aef2973c6157
+- !<LocatedAtComponent/977ca10f-3b6d-4932-bf0c-b6dbf701afde>
+  PrefabRemaps:
+    []
+  Name: Located At
+  Enabled: true
+  Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+  Location: !<reference> 26791eb7-79a2-4a6f-98b8-05d965fb3b1f
 - !<ScriptComponent/9807446e-2138-405e-a66d-d9031d6443ad>
   PrefabRemaps:
     []
@@ -11209,6 +11232,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/99d985dd-0eba-41c6-bbe0-b4b617177cb6>
+  PrefabRemaps:
+    []
+  Name: Custom Location Render Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> de024d07-de20-42a6-8f8c-fa55eb1b003e
 - !<SceneObject/9a00d80b-1e65-452e-ae9d-0d589d0397f2>
   PrefabRemaps:
     - 000dea77-4581-4489-b12d-1d0f0fd3c119: 7186ce10-dc10-42ca-a5e9-fad082eb9ac7
@@ -16503,6 +16541,21 @@
     - !<own> 917718b3-a277-44fe-aca6-9071bbedc00a
   Components:
     []
+- !<SceneObject/d5439190-5dbe-48a8-b6f6-336e35cd93af>
+  PrefabRemaps:
+    []
+  Name: Flip camera controller
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 99d985dd-0eba-41c6-bbe0-b4b617177cb6
+  Components:
+    - !<own> d71af669-e94b-4d9a-9fb1-820121889e00
 - !<SceneObject/d585977e-1717-4fe3-8674-8936992c9dd1>
   PrefabRemaps:
     []
@@ -16569,6 +16622,22 @@
   Name: ScreenTransformAdapter
   Enabled: true
   ScriptAsset: !<reference> 83c9ab7f-6538-4ca6-a815-a12eb307a249
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/d71af669-e94b-4d9a-9fb1-820121889e00>
+  PrefabRemaps:
+    []
+  Name: FrontCameraMirror
+  Enabled: true
+  ScriptAsset: !<reference> 4b4f1640-4f6e-4a03-ba16-890740d81236
   ScriptInputsDefault:
     {}
   ScriptTypesDefault:
@@ -17466,6 +17535,26 @@
   ScriptTypes:
     "":
       {}
+- !<RenderMeshVisual/de024d07-de20-42a6-8f8c-fa55eb1b003e>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3470d546-31dc-4e43-9727-8d82da1339c6
+  Mesh: !<reference> de4485c0-7a72-472e-a2c2-ace26a944081
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/de0b3d4f-c231-4899-9749-ba196437a944>
   PrefabRemaps:
     []
