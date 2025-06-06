@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/f5b24d3d-3f2c-18c4-490d-fbc0af530d44>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e2a95a02-ce5c-4aa4-870f-013afff7a781
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e2a95a02-ce5c-4aa4-870f-013afff7a781
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 23ab08c3-7e97-465e-b679-c4bccb38f0c5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/23ab08c3-7e97-465e-b679-c4bccb38f0c5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d51b77ba-0a67-474d-abc4-b122f85a8011
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    activeButtonMaterials: false
+    idleButtonMaterials: false
+    ingredientButton: false
+    ingredientMenu: false
+    potionButton: false
+    potionMenu: false
+    questButton: false
+    questButtons: false
+    questMenu: false
+    questMenus: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - questButtons: !<reference.SceneObject[]>
+        []
+      questMenus: !<reference.SceneObject[]>
+        []
+      ingredientButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ingredientMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      potionButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      potionMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      questButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      questMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      idleButtonMaterials: !<reference.Material[]>
+        []
+      activeButtonMaterials: !<reference.Material[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input SceneObject[] questButtons"
+    - "// @input SceneObject[] questMenus"
+    - // @input SceneObject ingredientButton
+    - // @input SceneObject ingredientMenu
+    - // @input SceneObject potionButton
+    - // @input SceneObject potionMenu
+    - // @input SceneObject questButton
+    - // @input SceneObject questMenu
+    - "// @input Asset.Material[] idleButtonMaterials"
+    - "// @input Asset.Material[] activeButtonMaterials"

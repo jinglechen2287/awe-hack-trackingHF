@@ -29,6 +29,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     activeButtonMaterials: false
+    continueQuestButton: false
     highFiveEntryPoint: false
     idleButtonMaterials: false
     ingredientButton: false
@@ -39,6 +40,8 @@
     questButtons: false
     questMenu: false
     questMenus: false
+    quitQuestButton: false
+    warningQuestMenu: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -55,6 +58,9 @@
       potionMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       questButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       questMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      warningQuestMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      quitQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      continueQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       idleButtonMaterials: !<reference.Material[]>
         []
       activeButtonMaterials: !<reference.Material[]>
@@ -72,5 +78,8 @@
     - // @input SceneObject potionMenu
     - // @input SceneObject questButton
     - // @input SceneObject questMenu
+    - // @input SceneObject warningQuestMenu
+    - // @input SceneObject quitQuestButton
+    - // @input SceneObject continueQuestButton
     - "// @input Asset.Material[] idleButtonMaterials"
     - "// @input Asset.Material[] activeButtonMaterials"

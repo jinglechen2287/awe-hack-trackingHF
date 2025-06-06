@@ -1,0 +1,98 @@
+- !<AssetImportMetadata/0a0d7344-1419-4c48-bbe7-0669ff628a2b>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> dd1ec34a-2e60-4041-beab-64ea85cf732a
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> dd1ec34a-2e60-4041-beab-64ea85cf732a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 1446b8fa-c2ae-4e10-ae6a-a214dbaaed30
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ObjectPrefabAssetData/1446b8fa-c2ae-4e10-ae6a-a214dbaaed30>
+  SourceRemaps:
+    - 585e03bd-faaa-4de0-b064-090b2f8693eb: 7453dd75-56cc-42c4-84cd-45d1d163cac6
+    - 6d0812bc-6958-4e4e-8e96-01941d7d384f: dff0ac41-eb68-4cda-8895-7ee13bcc14f6
+    - 8e5d2f61-59f1-48a7-b34e-42a8e685d37b: 99f5dbae-2641-4f53-8ee8-90c08588aa86
+    - dd1ec34a-2e60-4041-beab-64ea85cf732a: 2e13b860-d610-4387-a450-51bbf5120705
+  SourceState: !<own> 2e13b860-d610-4387-a450-51bbf5120705
+- !<ObjectPrefab/2e13b860-d610-4387-a450-51bbf5120705>
+  PackagePath: ""
+  objects:
+    - !<own> 7453dd75-56cc-42c4-84cd-45d1d163cac6
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/7453dd75-56cc-42c4-84cd-45d1d163cac6>
+  PrefabRemaps:
+    []
+  Name: container-button
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -1.935684, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 99f5dbae-2641-4f53-8ee8-90c08588aa86
+    - !<own> dff0ac41-eb68-4cda-8895-7ee13bcc14f6
+- !<RenderMeshVisual/99f5dbae-2641-4f53-8ee8-90c08588aa86>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  RenderOrder: 1
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 873c25d9-0387-4bc9-aa0a-30b0033c3a74
+  Mesh: !<reference> 06f66042-4715-41b3-a6a7-0942c4ba0a20
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: true
+  BlendShapes:
+    Pinch: 0.000000
+    Z depth: 1.000000
+- !<ScriptComponent/dff0ac41-eb68-4cda-8895-7ee13bcc14f6>
+  PrefabRemaps:
+    []
+  Name: Interactable
+  Enabled: true
+  ScriptAsset: !<reference> 8d9ad83d-a1fb-430f-aa31-42e0b0d7a540
+  ScriptInputsDefault:
+    targetingMode: true
+    enableInstantDrag: true
+    allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+    isSynced: true
+    acceptableSyncInteractionTypes: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetingMode: !<float> 3.000000
+      enableInstantDrag: false
+      allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 0.000000
+      acceptableYDirections: !<float> 0.000000
+      acceptableZDirections: !<float> 1.000000
+      isSynced: true
+      acceptableSyncInteractionTypes: !<float> 7.000000
+  ScriptTypes:
+    "":
+      {}

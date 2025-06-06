@@ -28,6 +28,15 @@ export class MenuManager extends BaseScriptComponent {
   @input
   questMenu: SceneObject;
 
+  @input
+  warningQuestMenu: SceneObject;
+
+  @input
+  quitQuestButton: SceneObject;
+
+  @input
+  continueQuestButton: SceneObject;
+
   @input idleButtonMaterials: Material[];
   @input activeButtonMaterials: Material[];
 
@@ -160,31 +169,53 @@ export class MenuManager extends BaseScriptComponent {
     this.setQuestMenuActive();
   }
 
+  public quitQuest(){
+    this.activeQuest = -1;
+    this.continueQuestButton.enabled = false;
+    this.quitQuestButton.enabled = false;
+    this.questButtons.forEach((parent, index) => {
+      const textComp = parent.getComponent("Component.Text");
+      if (textComp) {
+        textComp.textFill.color = new vec4(1, 1, 1, 1);
+      }
+    })
+    //other things to add to reset the quest
+  }
+
+
   private acceptQuest(n: number): void {
+    if (this.activeQuest != n && this.activeQuest != -1){
+      this.setWarningMenuActive();
+      return;
+    }
+
     this.setQuestMenuActive();
     this.activeQuest = n;
     this.questSystem.addQuest(this.allAvailableQuests[n])
 
-    // Loop through questButtons and disable all child buttons
     this.questButtons.forEach((parent, index) => {
-      const childButton = parent.children.find((child) =>
-        child.getComponent(Interactable.getTypeName())
-      );
-      if (childButton) {
-        childButton.enabled = index === n; // Enable only the selected one
-      }
       const textComp = parent.getComponent("Component.Text");
       if (textComp) {
         textComp.textFill.color =
           index === n ? new vec4(0, 1, 0, 1) : new vec4(1, 1, 1, 1);
       }
     });
+
+    this.continueQuestButton.enabled = true;
+    this.quitQuestButton.enabled = true;
   }
 
   private setQuestMenuActive(): void {
     this.showOnlyMenu(this.questMenu);
     this.setButtonMaterial(this.ingredientButton, this.idleButtonMaterials);
     this.setButtonMaterial(this.questButton, this.activeButtonMaterials);
+    this.setButtonMaterial(this.potionButton, this.idleButtonMaterials);
+  }
+
+  private setWarningMenuActive(): void {
+    this.showOnlyMenu(this.warningQuestMenu);
+    this.setButtonMaterial(this.ingredientButton, this.idleButtonMaterials);
+    this.setButtonMaterial(this.questButton, this.idleButtonMaterials);
     this.setButtonMaterial(this.potionButton, this.idleButtonMaterials);
   }
 
@@ -207,6 +238,7 @@ export class MenuManager extends BaseScriptComponent {
     if (this.ingredientMenu) this.ingredientMenu.enabled = false;
     if (this.potionMenu) this.potionMenu.enabled = false;
     if (this.questMenu) this.questMenu.enabled = false;
+    if (this.warningQuestMenu) this.warningQuestMenu.enabled = false;
 
     if (menuToShow) menuToShow.enabled = true;
   }

@@ -1,0 +1,62 @@
+- !<Material/1fad7f82-fb8a-4346-a9b8-2a7d877076cd>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 38896e54-ddcd-4ccf-8a9d-a497e8162e68
+- !<PassInfo/38896e54-ddcd-4ccf-8a9d-a497e8162e68>
+  CachedProperties:
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
+  DepthWrite: false
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: true
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Front
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 2
+  Defines:
+    []
+  BlendMode: AlphaTest
+  Properties:
+    Port_Input1_N013:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N016:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N017:
+      typeIdx: 1
+      value: 0.500000
+    Port_Input1_N024:
+      typeIdx: 1
+      value: 0.000000
+    Port_Value1_N015:
+      typeIdx: 5
+      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    Port_Value1_N022:
+      typeIdx: 5
+      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    alphaTestThreshold:
+      typeIdx: 1
+      value: 0.500000
+    lineColor:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 0.039216, w: 1.000000}
+    lineWeight:
+      typeIdx: 1
+      value: 0.250000
+  Pass: !<reference> 3a84d0fb-2538-409a-9190-98fe03819ec6
+  RTCaster: false
+  RTReceiver: false

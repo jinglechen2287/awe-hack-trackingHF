@@ -2669,6 +2669,9 @@
   ScriptAsset: !<reference> 6b2d5568-1ffc-4dfa-b477-2873fe868f16
   ScriptInputsDefault:
     highFiveEntryPoint: true
+    warningQuestMenu: true
+    quitQuestButton: true
+    continueQuestButton: true
     idleButtonMaterials: true
     activeButtonMaterials: true
   ScriptTypesDefault:
@@ -2686,6 +2689,9 @@
       potionMenu: !<reference.SceneObject> 82f54c53-cf58-47ec-aa2c-b0d860636af7
       questButton: !<reference.SceneObject> 9e35140a-9103-454c-8b41-a4079b377a3c
       questMenu: !<reference.SceneObject> 944420e7-cc72-4bd1-8c1c-64e011d3c598
+      warningQuestMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      quitQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      continueQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       idleButtonMaterials: !<reference.Material[]>
         []
       activeButtonMaterials: !<reference.Material[]>
