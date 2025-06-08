@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/97637179-ceb4-b4c6-f9fb-1f10acfb9046>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 3a226838-629e-4cf2-89da-9cd4744ead59
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 3a226838-629e-4cf2-89da-9cd4744ead59
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> a498b446-3038-4924-a9dd-6195e3f5ac96
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<SceneObject/9223c672-c605-431c-970b-4f37eb99e74d>
+  PrefabRemaps:
+    []
+  Name: Modern Body Tube
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 13.478287, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d7fe4e59-b0bc-458c-bd44-0fa52ab4006a
+- !<ObjectPrefab/92d4af10-6bc9-4de7-b450-ef425e4129fa>
+  PackagePath: ""
+  objects:
+    - !<own> 9223c672-c605-431c-970b-4f37eb99e74d
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/a498b446-3038-4924-a9dd-6195e3f5ac96>
+  SourceRemaps:
+    - 58816a71-9dde-4b9d-b250-fa0927d27724: 9223c672-c605-431c-970b-4f37eb99e74d
+    - 5cc43da4-9a60-47d2-a059-db36005e7748: d7fe4e59-b0bc-458c-bd44-0fa52ab4006a
+  SourceState: !<own> 92d4af10-6bc9-4de7-b450-ef425e4129fa
+- !<RenderMeshVisual/d7fe4e59-b0bc-458c-bd44-0fa52ab4006a>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 1f845179-2f5b-46e6-8363-164cd429bd0a
+  Mesh: !<reference> 2f9350c5-9e1d-4b45-9744-6831e1aa2ed2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

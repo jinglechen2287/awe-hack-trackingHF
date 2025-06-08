@@ -1,0 +1,41 @@
+- !<ObjectPrefab/3a226838-629e-4cf2-89da-9cd4744ead59>
+  PackagePath: ""
+  objects:
+    - !<own> 58816a71-9dde-4b9d-b250-fa0927d27724
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/58816a71-9dde-4b9d-b250-fa0927d27724>
+  PrefabRemaps:
+    []
+  Name: Modern Body Tube
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -1.228443, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5cc43da4-9a60-47d2-a059-db36005e7748
+- !<RenderMeshVisual/5cc43da4-9a60-47d2-a059-db36005e7748>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 1f845179-2f5b-46e6-8363-164cd429bd0a
+  Mesh: !<reference> 2f9350c5-9e1d-4b45-9744-6831e1aa2ed2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

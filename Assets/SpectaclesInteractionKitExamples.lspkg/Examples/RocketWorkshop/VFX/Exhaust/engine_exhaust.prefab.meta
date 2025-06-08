@@ -1,0 +1,127 @@
+- !<AssetImportMetadata/73f47809-1f12-2c45-2284-706c5f954648>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> bb0fb64e-58e9-4259-940a-dcd3dd68c872
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> bb0fb64e-58e9-4259-940a-dcd3dd68c872
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 3a8a80c4-3ef2-448c-8848-08bb92ab501b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<LookAtComponent/356ff389-2460-413f-98a7-d306475b717c>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtPoint
+  AimVectors: NegativeZAimYUp
+  WorldUpVector: ObjectY
+  Target: !<reference> b49fd017-c3f4-45da-b6f3-ea6a4119aa87
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+- !<ObjectPrefabAssetData/3a8a80c4-3ef2-448c-8848-08bb92ab501b>
+  SourceRemaps:
+    - 24aa1500-02d3-43dc-ad24-3a55075a1bca: ecd0ed55-d32b-4f23-9f06-f3c9a07408a8
+    - 4925cf79-a4e6-480e-b602-b0ac7595bd67: f002339b-dca3-4b9d-9275-a68f9ef6a30a
+    - 84678b11-ef94-451c-acab-d83668cc8d4f: 356ff389-2460-413f-98a7-d306475b717c
+    - a6a46a3e-dc43-4cd3-b977-82b1523221e4: 3aa55bfb-5fdc-48ee-a09e-cca7b4714cba
+    - bfc28ecd-10d2-4fd8-b7ac-8a0e85a70e4c: a8b7b189-cb5a-4f03-83e3-bdb6d7989750
+    - d9dd40f9-af81-4b0d-82c8-cfc8bbf24538: b6805416-7031-4632-a3c0-930b1974efb3
+  SourceState: !<own> 4a83248f-ba14-48f0-b065-7385aac74eb8
+- !<RenderMeshVisual/3aa55bfb-5fdc-48ee-a09e-cca7b4714cba>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> e5fa9c65-41c1-4676-9573-af9f483034f6
+  Mesh: !<reference> ff02fa38-d11f-4304-bfa0-bd3a20d12347
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    edit34: 1.000000
+- !<ObjectPrefab/4a83248f-ba14-48f0-b065-7385aac74eb8>
+  PackagePath: ""
+  objects:
+    - !<own> f002339b-dca3-4b9d-9275-a68f9ef6a30a
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/a8b7b189-cb5a-4f03-83e3-bdb6d7989750>
+  PrefabRemaps:
+    []
+  Name: blendshapes1
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.727880, z: 0.000000}
+    rotation: {x: -180.000000, y: 0.000000, z: 180.000000}
+    scale: {x: 0.900000, y: 0.900000, z: 0.900000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> ecd0ed55-d32b-4f23-9f06-f3c9a07408a8
+  Components:
+    - !<own> 3aa55bfb-5fdc-48ee-a09e-cca7b4714cba
+    - !<own> 356ff389-2460-413f-98a7-d306475b717c
+- !<RenderMeshVisual/b6805416-7031-4632-a3c0-930b1974efb3>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 100
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0f70c8e8-b535-493f-84c8-08b9690fb83a
+  Mesh: !<reference> 400b0601-7c58-4a42-92fa-34916c91ead9
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/ecd0ed55-d32b-4f23-9f06-f3c9a07408a8>
+  PrefabRemaps:
+    []
+  Name: glow_plane
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -0.043960, z: -0.100000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 2.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b6805416-7031-4632-a3c0-930b1974efb3
+- !<SceneObject/f002339b-dca3-4b9d-9275-a68f9ef6a30a>
+  PrefabRemaps:
+    []
+  Name: engine_exhaust
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> a8b7b189-cb5a-4f03-83e3-bdb6d7989750
+  Components:
+    []

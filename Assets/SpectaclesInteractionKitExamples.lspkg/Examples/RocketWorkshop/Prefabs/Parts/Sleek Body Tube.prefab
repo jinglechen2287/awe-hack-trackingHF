@@ -1,0 +1,41 @@
+- !<ObjectPrefab/a6aa06bb-f7a9-4f99-bdfb-28df366b7534>
+  PackagePath: ""
+  objects:
+    - !<own> 3f61a223-b080-4e06-a579-b126f22be04e
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/3f61a223-b080-4e06-a579-b126f22be04e>
+  PrefabRemaps:
+    []
+  Name: Sleek Body Tube
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -1.228443, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 810d61e1-aa99-473e-b696-1f91833e8e2c
+- !<RenderMeshVisual/810d61e1-aa99-473e-b696-1f91833e8e2c>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> d176f04d-10b8-48e3-8afe-fbd88c7b6aaa
+  Mesh: !<reference> ed48e2b7-673c-4547-9268-4124c84d3071
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
