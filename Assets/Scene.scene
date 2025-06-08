@@ -2384,6 +2384,26 @@
   ScriptTypes:
     "":
       {}
+- !<RenderMeshVisual/165a019f-889b-4f35-8b33-2f1f93b2cdf9>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/167eeb23-090c-4e86-b0f2-4efa0bbd5848>
   PrefabRemaps:
     []
@@ -2392,7 +2412,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -2588,7 +2608,7 @@
   PrefabRemaps:
     []
   Name: "User's Head Attachment"
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3588,7 +3608,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -5177,13 +5197,13 @@
   Enabled: true
   ScriptAsset: !<reference> 70f0aca6-a1bc-42ea-ae8d-ef0f867c6f7c
   ScriptInputsDefault:
-    head: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       bubbleAnimationControllerInput: !<MappingBased.AssignableType> 530b9df6-5a44-46c4-a9fb-47fdf33f44a1
-      head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      head: !<reference.SceneObject> f9991929-b852-4413-b021-92ef22aabf1c
   ScriptTypes:
     "":
       {}
@@ -8297,7 +8317,7 @@
   LocalTransform:
     position: {x: 8.999760, y: -21.000099, z: 25.000004}
     rotation: {x: 149.610748, y: 89.980217, z: 149.615875}
-    scale: {x: 3.000002, y: 3.000000, z: 3.000002}
+    scale: {x: 1.000000, y: 0.999999, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -9218,7 +9238,7 @@
     {}
   ScriptInputs:
     "":
-      box: !<reference.SceneObject> b786b462-4ba2-436a-82e3-ad996cf6985c
+      box: !<reference.SceneObject> 59fee309-642a-40fa-8c59-f65459170dca
   ScriptTypes:
     "":
       {}
@@ -9640,6 +9660,21 @@
     bottom: -2.000000
     right: 5.750000
     top: 2.000000
+- !<SceneObject/59fee309-642a-40fa-8c59-f65459170dca>
+  PrefabRemaps:
+    []
+  Name: Box
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 165a019f-889b-4f35-8b33-2f1f93b2cdf9
 - !<ScriptComponent/5a3159ab-06c5-4c27-8e5f-3d41a2da2556>
   PrefabRemaps:
     []
@@ -11509,6 +11544,7 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 710b1f4f-fc66-4a69-97d5-b5cfcc325e2d
+    - !<own> 59fee309-642a-40fa-8c59-f65459170dca
   Components:
     []
 - !<Text/6ba40e52-cc21-4024-a109-833e54ad6b4e>
@@ -15999,7 +16035,7 @@
   LocalTransform:
     position: {x: 9.000004, y: -20.999996, z: -49.999004}
     rotation: {x: -149.614838, y: 89.980217, z: -149.615479}
-    scale: {x: 3.000001, y: 3.000000, z: 3.000001}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -20482,7 +20518,7 @@
   PrefabRemaps:
     []
   Name: HighFive
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -21075,7 +21111,7 @@
   LocalTransform:
     position: {x: 9.000000, y: -20.999992, z: 0.000988}
     rotation: {x: -149.614838, y: 89.980217, z: -149.615479}
-    scale: {x: 3.000001, y: 3.000000, z: 3.000001}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -22096,7 +22132,7 @@
     - fef5e4dd-a9ef-4686-ac45-556cc4b9eeb2: 94247da3-fdd5-42c1-b81b-7efd3d2cd6f1
     - ff34fa55-f00b-4b85-8609-2e4d2cea5a3c: 65eb0f56-d633-4e4c-ae32-ba738c757232
   Name: SingleplayerUI
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -100.000000}
@@ -23820,7 +23856,7 @@
   LocalTransform:
     position: {x: 9.000008, y: -20.999996, z: -24.999004}
     rotation: {x: -149.614838, y: 89.980217, z: -149.615479}
-    scale: {x: 3.000001, y: 3.000000, z: 3.000001}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -24237,19 +24273,17 @@
   Enabled: true
   ScriptAsset: !<reference> fe896866-35fa-47a7-8349-9ca1b26c453e
   ScriptInputsDefault:
-    headSynchronizationInput: true
-    appStateSyncInput: true
-    friendEffect: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handSynchronizationInput: !<MappingBased.AssignableType> 56ab003f-9d1e-49c9-bf60-0628519f3c6f
-      headSynchronizationInput: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
-      appStateSyncInput: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      headSynchronizationInput: !<MappingBased.AssignableType_1> 7b62fc00-200b-4c21-bafa-0da1ce43705f
+      appStateSyncInput: !<MappingBased.AssignableType_2> 5d78c538-6638-4da3-b328-1ab6b8b4097e
       highFiveControllerInput: !<MappingBased.AssignableType_3> 33ca2a81-0cae-476d-b918-1b92a4358ad7
       questHint: !<reference.Text> 47c02881-bc01-4589-bdbd-838165dbfb28
-      friendEffect: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      friendEffect: !<reference.SceneObject> cec10d11-2508-4d01-bc0e-9d022aaa34ca
   ScriptTypes:
     "":
       {}
@@ -27111,8 +27145,6 @@
   Enabled: true
   ScriptAsset: !<reference> ede4bbc5-e64d-443f-8a65-87bd2396c92f
   ScriptInputsDefault:
-    reopenMenu: true
-    reopenMenuButton: true
     autoShowHide: true
     border: true
     allowScaling: true
@@ -27133,8 +27165,8 @@
     {}
   ScriptInputs:
     "":
-      reopenMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      reopenMenuButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      reopenMenu: !<reference.SceneObject> 40c9483c-d6e0-47c1-8a29-43c03637ca18
+      reopenMenuButton: !<reference.SceneObject> 632cc95d-5c9b-4ab6-99f5-fd9b57d3f773
       autoShowHide: true
       innerSize: !<Vec2> {x: 60.000000, y: 20.000000}
       border: !<float> 4.000000
@@ -27747,7 +27779,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -30043,7 +30075,7 @@
   PrefabRemaps:
     []
   Name: "Friend's Head Attachment"
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}

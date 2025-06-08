@@ -26,35 +26,35 @@ export class MenuManager extends BaseScriptComponent {
 
   @input idleButtonMaterials: Material[];
   @input activeButtonMaterials: Material[];
-    
+
   public activeQuest = -1;
 
   onAwake(): void {
     this.createEvent("OnStartEvent").bind(() => {
-  // Setup listeners for quest menu buttons (inside menus)
-  this.questMenus.forEach((menuObj, index) => {
-    const childButton = menuObj.children.find(child =>
-      child.getComponent(Interactable.getTypeName())
-    );
-    if (!childButton) {
-      print(`No Interactable child found in questMenu[${index}]`);
-      return;
-    }
+      // Setup listeners for quest menu buttons (inside menus)
+      this.questMenus.forEach((menuObj, index) => {
+        const childButton = menuObj.children.find(child =>
+          child.getComponent(Interactable.getTypeName())
+        );
+        if (!childButton) {
+          print(`No Interactable child found in questMenu[${index}]`);
+          return;
+        }
 
-    const interactable = childButton.getComponent(Interactable.getTypeName());
-    if (!interactable) {
-      print(`Child in questMenu[${index}] has no Interactable`);
-      return;
-    }
+        const interactable = childButton.getComponent(Interactable.getTypeName());
+        if (!interactable) {
+          print(`Child in questMenu[${index}] has no Interactable`);
+          return;
+        }
 
-    interactable.onTriggerEnd.add((event: InteractorEvent) => {
-      if (this.enabled) {
-        this.setQuestActive(index);
-      }
-    });
-  });
+        interactable.onTriggerEnd.add((event: InteractorEvent) => {
+          if (this.enabled) {
+            this.setQuestActive(index);
+          }
+        });
+      });
 
-    this.questButtons.forEach((parentObj, index) => {
+      this.questButtons.forEach((parentObj, index) => {
         const buttonObj = parentObj.children.find(child =>
           child.getComponent(Interactable.getTypeName())
         );
@@ -62,20 +62,20 @@ export class MenuManager extends BaseScriptComponent {
           print(`Child button missing for questButton parent at index ${index}`);
           return;
         }
-    
+
         const interactable = buttonObj.getComponent(Interactable.getTypeName());
         if (!interactable) {
           print(`Interactable missing on child at index ${index}`);
           return;
         }
-    
+
         interactable.onTriggerEnd.add((event: InteractorEvent) => {
           if (this.enabled) {
             this.showOnlyMenu(this.questMenus[index]);
           }
         });
       });
-});
+    });
     // Ingredient button
     const ingredientInteractable = this.ingredientButton.getComponent(Interactable.getTypeName());
     if (ingredientInteractable) {

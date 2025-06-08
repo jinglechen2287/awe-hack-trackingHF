@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/ee617a85-d131-422f-82d1-1cdca7452791>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 13985d35-0cd9-4d5e-9598-7feb1845d2ab
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 13985d35-0cd9-4d5e-9598-7feb1845d2ab
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 2735d0d7-f6b0-4494-81ca-9b4a92783ff4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/2735d0d7-f6b0-4494-81ca-9b4a92783ff4>
+  SourceRemaps:
+    - 13985d35-0cd9-4d5e-9598-7feb1845d2ab: ea7769b8-3d0d-48fe-b382-63a71bed3cd4
+    - 5cef0925-3adf-4f59-b6e7-9a31d4bf6f42: d9a144a9-9634-4301-bb51-bac65ecb6619
+    - be3d95b2-22f3-4e34-bea9-5cfababe7bab: 4a32f78d-104c-4c07-b961-e96afce02b17
+  SourceState: !<own> ea7769b8-3d0d-48fe-b382-63a71bed3cd4
+- !<SceneObject/4a32f78d-104c-4c07-b961-e96afce02b17>
+  PrefabRemaps:
+    []
+  Name: SmokeVFX__PLACE_IN_OBJECTS_PANEL
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d9a144a9-9634-4301-bb51-bac65ecb6619
+- !<VFXComponent/d9a144a9-9634-4301-bb51-bac65ecb6619>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> fb27e904-7438-4cf9-81e3-f30989d15d27
+- !<ObjectPrefab/ea7769b8-3d0d-48fe-b382-63a71bed3cd4>
+  PackagePath: SmokeVFX__PLACE_IN_OBJECTS_PANEL
+  objects:
+    - !<own> 4a32f78d-104c-4c07-b961-e96afce02b17
+  LazyLoading: false
+  RetainAssets: true

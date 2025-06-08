@@ -4,6 +4,21 @@
     - !<own> 30097de8-1eda-4d09-b200-c2f1c5c922bd
 - !<PassInfo/30097de8-1eda-4d09-b200-c2f1c5c922bd>
   CachedProperties:
+    - PreviewEnabled:
+        typeIdx: 0
+        value: 0
+    - baseTex:
+        typeIdx: 9
+        value:
+          id: 9517548e-ab78-457a-9a54-1a9d61576ee1
+          sampler:
+            filteringMode: Trilinear
+            wrapModeU: Repeat
+            wrapModeV: Repeat
+            wrapModeW: Repeat
+            borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+            mipmaps: false
+          type: Texture2D
     - baseTexBorderColor:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -33,21 +48,7 @@
     []
   BlendMode: PremultipliedAlphaAuto
   Properties:
-    PreviewEnabled:
-      typeIdx: 0
-      value: 0
-    baseTex:
-      typeIdx: 9
-      value:
-        id: 9517548e-ab78-457a-9a54-1a9d61576ee1
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-          mipmaps: false
-        type: Texture2D
+    {}
   Pass: !<reference> 127a53a9-b013-46b6-9996-1905c58668e3
   RTCaster: false
   RTReceiver: false
