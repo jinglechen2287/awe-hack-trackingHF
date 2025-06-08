@@ -16,8 +16,6 @@
     {}
 - !<TypeScriptAssetData/6fd8d2aa-9c55-4b5c-b5a5-3ac91bd45300>
   InputLines:
-    - // @input SceneObject reopenMenu
-    - // @input SceneObject reopenMenuButton
     - '// @ui {"hint":"Controls the appearance, size, and interaction behavior of the container frame.", "widget":"group_start", "label":"Frame Settings"}'
     - '// @input bool autoShowHide = true {"hint":"When enabled, the frame automatically appears when hovered and hides when not being interacted with. Disable to manually control frame visibility."}'
     - "// @input vec2 innerSize = \"{32,32}\" {\"hint\":\"Size of the container's inner content area.\"}"
@@ -89,8 +87,6 @@
     maximumSize: false
     minimumSize: false
     relativeZ: false
-    reopenMenu: false
-    reopenMenuButton: false
     showCloseButton: false
     showFollowButton: false
     useBillboarding: false
@@ -104,9 +100,7 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - reopenMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      reopenMenuButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      autoShowHide: true
+    - autoShowHide: true
       innerSize: !<Vec2> {x: 32.000000, y: 32.000000}
       border: !<float> 4.000000
       constantPadding: !<Vec2> {x: 0.000000, y: 0.000000}

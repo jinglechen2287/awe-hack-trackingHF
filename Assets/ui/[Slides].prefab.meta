@@ -3168,8 +3168,6 @@
   Enabled: true
   ScriptAsset: !<reference> ede4bbc5-e64d-443f-8a65-87bd2396c92f
   ScriptInputsDefault:
-    reopenMenu: true
-    reopenMenuButton: true
     autoShowHide: true
     border: true
     allowScaling: true
@@ -3194,8 +3192,6 @@
     {}
   ScriptInputs:
     "":
-      reopenMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      reopenMenuButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       autoShowHide: true
       innerSize: !<Vec2> {x: 60.000000, y: 20.000000}
       border: !<float> 4.000000
