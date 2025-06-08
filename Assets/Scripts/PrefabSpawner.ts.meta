@@ -28,8 +28,12 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    ingredientPrefab: false
-    ingredientSpawnPoint: false
+    ingredient1Prefab: false
+    ingredient1SpawnPoint: false
+    ingredient2Prefab: false
+    ingredient2SpawnPoint: false
+    ingredient3Prefab: false
+    ingredient3SpawnPoint: false
     notIngredientPrefab: false
     notIngredientSpawnPoint: false
   ScriptTypesHidden:
@@ -37,15 +41,23 @@
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - ingredientPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+    - ingredient1Prefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      ingredient2Prefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      ingredient3Prefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       notIngredientPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      ingredientSpawnPoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ingredient1SpawnPoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ingredient2SpawnPoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ingredient3SpawnPoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       notIngredientSpawnPoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input Asset.ObjectPrefab ingredientPrefab
+    - // @input Asset.ObjectPrefab ingredient1Prefab
+    - // @input Asset.ObjectPrefab ingredient2Prefab
+    - // @input Asset.ObjectPrefab ingredient3Prefab
     - // @input Asset.ObjectPrefab notIngredientPrefab
-    - // @input SceneObject ingredientSpawnPoint
+    - // @input SceneObject ingredient1SpawnPoint
+    - // @input SceneObject ingredient2SpawnPoint
+    - // @input SceneObject ingredient3SpawnPoint
     - // @input SceneObject notIngredientSpawnPoint

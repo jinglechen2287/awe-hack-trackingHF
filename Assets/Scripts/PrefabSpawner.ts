@@ -2,20 +2,39 @@
 export class PrefabSpawner extends BaseScriptComponent {
 
     @input()
-    ingredientPrefab: ObjectPrefab;
+    ingredient1Prefab: ObjectPrefab;
+
+    @input()
+    ingredient2Prefab: ObjectPrefab;
+
+    @input()
+    ingredient3Prefab: ObjectPrefab;
 
     @input()
     notIngredientPrefab: ObjectPrefab;
 
     @input()
-    ingredientSpawnPoint: SceneObject;
+    ingredient1SpawnPoint: SceneObject;
+
+    @input()
+    ingredient2SpawnPoint: SceneObject;
+
+    @input()
+    ingredient3SpawnPoint: SceneObject;
 
     @input()
     notIngredientSpawnPoint: SceneObject;
 
-    instantiateIngredient() {
-        print("Instantiating ingredient");
-        let ingredient = this.ingredientPrefab.instantiate(this.ingredientSpawnPoint);
+    instantiateIngredient1() {
+        let ingredient1 = this.ingredient1Prefab.instantiate(this.ingredient1SpawnPoint);
+    }
+
+    instantiateIngredient2() {
+        let ingredient2 = this.ingredient2Prefab.instantiate(this.ingredient2SpawnPoint);
+    }
+    
+    instantiateIngredient3() {
+        let ingredient3 = this.ingredient3Prefab.instantiate(this.ingredient3SpawnPoint);
     }
 
     instantiateNotIngredient() {
