@@ -23,21 +23,33 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: ca50805f-8e0c-48ce-bf94-2d1fa7038c34
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    acceptedIngredientNames: false
+    cauldronCollider: false
+    ingredient1Counter: false
+    ingredient2Counter: false
+    ingredient3Counter: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    -
-      {}
+    - cauldronCollider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      acceptedIngredientNames: !<string[]>
+        []
+      ingredient1Counter: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      ingredient2Counter: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      ingredient3Counter: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input Component.ColliderComponent cauldronCollider
+    - "// @input string[] acceptedIngredientNames = {}"
+    - // @input Component.Text ingredient1Counter
+    - // @input Component.Text ingredient2Counter
+    - // @input Component.Text ingredient3Counter

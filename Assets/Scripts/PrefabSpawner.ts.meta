@@ -23,21 +23,29 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 08af0c53-355d-40e7-bde3-f95d9d2ce1bb
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    ingredientPrefab: false
+    ingredientSpawnPoint: false
+    notIngredientPrefab: false
+    notIngredientSpawnPoint: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    -
-      {}
+    - ingredientPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      notIngredientPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      ingredientSpawnPoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      notIngredientSpawnPoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input Asset.ObjectPrefab ingredientPrefab
+    - // @input Asset.ObjectPrefab notIngredientPrefab
+    - // @input SceneObject ingredientSpawnPoint
+    - // @input SceneObject notIngredientSpawnPoint

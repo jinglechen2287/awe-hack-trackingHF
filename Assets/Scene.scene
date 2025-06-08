@@ -1629,7 +1629,7 @@
   PrefabRemaps:
     []
   Name: "User's Head Attachment"
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3586,13 +3586,13 @@
   Enabled: true
   ScriptAsset: !<reference> 70f0aca6-a1bc-42ea-ae8d-ef0f867c6f7c
   ScriptInputsDefault:
-    {}
+    head: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       bubbleAnimationControllerInput: !<MappingBased.AssignableType> 530b9df6-5a44-46c4-a9fb-47fdf33f44a1
-      head: !<reference.SceneObject> f9991929-b852-4413-b021-92ef22aabf1c
+      head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -7484,21 +7484,6 @@
     []
   Components:
     - !<own> f9199eb1-a70c-4cf5-bb2c-31fcb79ff3d2
-- !<SceneObject/63aa5768-d21e-41f9-98de-d6f95a1dd2df>
-  PrefabRemaps:
-    []
-  Name: Custom Location
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 180.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> d5439190-5dbe-48a8-b6f6-336e35cd93af
-  Components:
-    - !<own> 977ca10f-3b6d-4932-bf0c-b6dbf701afde
 - !<ScriptComponent/63cdfce9-5233-446c-919d-7141efbdbd96>
   PrefabRemaps:
     []
@@ -12232,13 +12217,6 @@
     []
   Components:
     - !<own> 5c8d10b3-dec5-4e2f-a0d8-aef2973c6157
-- !<LocatedAtComponent/977ca10f-3b6d-4932-bf0c-b6dbf701afde>
-  PrefabRemaps:
-    []
-  Name: Located At
-  Enabled: true
-  Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-  Location: !<reference> 26791eb7-79a2-4a6f-98b8-05d965fb3b1f
 - !<ScriptComponent/9807446e-2138-405e-a66d-d9031d6443ad>
   PrefabRemaps:
     []
@@ -12482,21 +12460,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/99d985dd-0eba-41c6-bbe0-b4b617177cb6>
-  PrefabRemaps:
-    []
-  Name: Custom Location Render Mesh
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> de024d07-de20-42a6-8f8c-fa55eb1b003e
 - !<SceneObject/9a00d80b-1e65-452e-ae9d-0d589d0397f2>
   PrefabRemaps:
     - 000dea77-4581-4489-b12d-1d0f0fd3c119: 7186ce10-dc10-42ca-a5e9-fad082eb9ac7
@@ -15015,7 +14978,7 @@
   PrefabRemaps:
     []
   Name: HighFive
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -16277,7 +16240,7 @@
     - fef5e4dd-a9ef-4686-ac45-556cc4b9eeb2: 94247da3-fdd5-42c1-b81b-7efd3d2cd6f1
     - ff34fa55-f00b-4b85-8609-2e4d2cea5a3c: 65eb0f56-d633-4e4c-ae32-ba738c757232
   Name: SingleplayerUI
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -100.000000}
@@ -17959,17 +17922,19 @@
   Enabled: true
   ScriptAsset: !<reference> fe896866-35fa-47a7-8349-9ca1b26c453e
   ScriptInputsDefault:
-    {}
+    headSynchronizationInput: true
+    appStateSyncInput: true
+    friendEffect: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       handSynchronizationInput: !<MappingBased.AssignableType> 56ab003f-9d1e-49c9-bf60-0628519f3c6f
-      headSynchronizationInput: !<MappingBased.AssignableType_1> 7b62fc00-200b-4c21-bafa-0da1ce43705f
-      appStateSyncInput: !<MappingBased.AssignableType_2> 5d78c538-6638-4da3-b328-1ab6b8b4097e
+      headSynchronizationInput: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      appStateSyncInput: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       highFiveControllerInput: !<MappingBased.AssignableType_3> 33ca2a81-0cae-476d-b918-1b92a4358ad7
       questHint: !<reference.Text> 47c02881-bc01-4589-bdbd-838165dbfb28
-      friendEffect: !<reference.SceneObject> cec10d11-2508-4d01-bc0e-9d022aaa34ca
+      friendEffect: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -18302,21 +18267,6 @@
     - !<own> 917718b3-a277-44fe-aca6-9071bbedc00a
   Components:
     []
-- !<SceneObject/d5439190-5dbe-48a8-b6f6-336e35cd93af>
-  PrefabRemaps:
-    []
-  Name: Flip camera controller
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> 99d985dd-0eba-41c6-bbe0-b4b617177cb6
-  Components:
-    - !<own> d71af669-e94b-4d9a-9fb1-820121889e00
 - !<SceneObject/d585977e-1717-4fe3-8674-8936992c9dd1>
   PrefabRemaps:
     []
@@ -18383,22 +18333,6 @@
   Name: ScreenTransformAdapter
   Enabled: true
   ScriptAsset: !<reference> 83c9ab7f-6538-4ca6-a815-a12eb307a249
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
-- !<ScriptComponent/d71af669-e94b-4d9a-9fb1-820121889e00>
-  PrefabRemaps:
-    []
-  Name: FrontCameraMirror
-  Enabled: true
-  ScriptAsset: !<reference> 4b4f1640-4f6e-4a03-ba16-890740d81236
   ScriptInputsDefault:
     {}
   ScriptTypesDefault:
@@ -19326,26 +19260,6 @@
   ScriptTypes:
     "":
       {}
-- !<RenderMeshVisual/de024d07-de20-42a6-8f8c-fa55eb1b003e>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 3470d546-31dc-4e43-9727-8d82da1339c6
-  Mesh: !<reference> de4485c0-7a72-472e-a2c2-ace26a944081
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/de0b3d4f-c231-4899-9749-ba196437a944>
   PrefabRemaps:
     []
@@ -20131,6 +20045,8 @@
   Enabled: true
   ScriptAsset: !<reference> ede4bbc5-e64d-443f-8a65-87bd2396c92f
   ScriptInputsDefault:
+    reopenMenu: true
+    reopenMenuButton: true
     autoShowHide: true
     border: true
     allowScaling: true
@@ -20151,8 +20067,8 @@
     {}
   ScriptInputs:
     "":
-      reopenMenu: !<reference.SceneObject> 40c9483c-d6e0-47c1-8a29-43c03637ca18
-      reopenMenuButton: !<reference.SceneObject> 632cc95d-5c9b-4ab6-99f5-fd9b57d3f773
+      reopenMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      reopenMenuButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       autoShowHide: true
       innerSize: !<Vec2> {x: 60.000000, y: 20.000000}
       border: !<float> 4.000000
@@ -22150,7 +22066,7 @@
   PrefabRemaps:
     []
   Name: "Friend's Head Attachment"
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}

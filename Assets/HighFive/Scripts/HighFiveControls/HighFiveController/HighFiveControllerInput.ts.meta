@@ -27,15 +27,18 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     bubbleAnimationControllerInput: false
+    head: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - bubbleAnimationControllerInput: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      head: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input AssignableType bubbleAnimationControllerInput
+    - // @input SceneObject head
   SetupScript:
     code: ""
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
