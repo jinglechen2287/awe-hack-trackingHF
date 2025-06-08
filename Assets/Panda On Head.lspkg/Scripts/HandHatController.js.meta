@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/f7bc9f58-0b45-fec3-50b0-c25363aaeb87>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 70247e51-73ff-4c3c-aea9-ec9d8b43ae2b
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 70247e51-73ff-4c3c-aea9-ec9d8b43ae2b
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    AssetLibraryId: 2EoxANO6k9ueh5jgbnncGc
+  AssetDataMap:
+    JavaScriptAsset: !<own> 737a037a-49ec-499a-802e-cf514e12cd68
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/737a037a-49ec-499a-802e-cf514e12cd68>
+  SvgIcon: ""
+  Description: Set and play animation depending on whether object is detected or lost.
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6e002619-3477-4335-a24c-d042e1a3e91b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    animPlayer: false
+    foundAnimName: false
+    handTracking: false
+    lostAnimName: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - animPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      foundAnimName: ""
+      lostAnimName: ""
+      handTracking: !<reference.ObjectTracking> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  SetupScript:
+    code: ""
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000

@@ -108,6 +108,13 @@ export class ContainerFrame extends BaseScriptComponent {
    * When enabled, the frame automatically appears when hovered and hides when
    * not being interacted with. Disable to manually control frame visibility.
    */
+
+  @input
+  reopenMenu: SceneObject
+
+  @input
+  reopenMenuButton: SceneObject
+
   @ui.group_start("Frame Settings")
   @hint("Controls the appearance, size, and interaction behavior of the container frame.")
   @input
@@ -119,6 +126,7 @@ to manually control frame visibility."
   /**
    * Size of the container's inner content area.
    */
+  
   @input("vec2", "{32,32}")
   @hint("Size of the container's inner content area.")
   innerSize: vec2 = new vec2(32, 32)
@@ -497,6 +505,11 @@ precision when interacting with buttons and UI elements using hand tracking."
 
   private interactionPlane: InteractionPlane
 
+  public activate(): void {
+      this.parent.enabled = true
+      this._isVisible = true
+  }
+
   onAwake() {
     // frame
     this.frame = this.framePrefab.instantiate(null)
@@ -527,10 +540,22 @@ precision when interacting with buttons and UI elements using hand tracking."
     })
 
     this.closeButton.onTrigger.add(() => {
+      this.reopenMenu.enabled = true
       this.inputState.isPinching = false
       this.parent.enabled = false
       this._isVisible = false
     })
+
+    this.createEvent("OnStartEvent").bind(() => {
+      const interactable = this.reopenMenuButton.getComponent(
+          Interactable.getTypeName()
+      );
+      interactable.onTriggerEnd.add((event: InteractorEvent) => {
+          this.activate();
+          this.reopenMenu.enabled = false;
+      });
+    })
+
 
     this.followButton = new LabeledPinchButton({
       prefab: this.labeledButtonPrefab,
@@ -1610,7 +1635,7 @@ precision when interacting with buttons and UI elements using hand tracking."
     validate(this.renderMeshVisual)
     const currentOpacity = this._opacity
     // enable on show
-    this.renderMeshVisual.enabled = true
+    this.renderMeshVisual.enabled = false
     if (this.closeButton && this.showCloseButton) this.closeButton.object.enabled = true
     if (this.followButton && this.showFollowButton) this.followButton.object.enabled = true
 

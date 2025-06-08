@@ -1,0 +1,34 @@
+- !<NativePackageDescriptor/1436f92d-e86f-4f33-ad69-07063f6f226d>
+  PackagePath: ""
+  StudioVersion:
+    major: 5
+    minor: 9
+    patch: 1
+    build: 25051422
+    type: Unset
+  Description: This asset allows you to set and play animations based on whether the object is detected or lost.
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  InternalVersion: 3
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  UpdateCheckpoint: 57
+  ExportUid: 5a011dfb-9e81-4477-9227-a7e87369cfca
+  ComponentUid: 1e72f28c-1a36-4fe7-8a58-202cbcfedebf
+  CurrentVisibility: Locked
+  MaxVisibility: Editable
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
+  AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
+    Name: ""
+    AssetId: ""
+    Hash: ""
+    Version:
+      major: 0
+      minor: 0
+      patch: 0
+      build: 0
+  coreVersion: 309
+  clientVersion: 13.380000

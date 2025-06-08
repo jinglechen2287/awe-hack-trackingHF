@@ -405,7 +405,7 @@ precision when interacting with buttons and UI elements using hand tracking."
     innerInteractableActive: false
   }
 
-  private _opacity: number = 1
+  private _opacity: number = 0
   private opacityCancel: CancelSet = new CancelSet()
 
   /**
@@ -1678,7 +1678,7 @@ precision when interacting with buttons and UI elements using hand tracking."
    */
   set borderAlpha(alpha: number) {
     if (!this.destroyed) {
-      this.material.mainPass.borderAlpha = alpha
+      this.material.mainPass.borderAlpha = 0
     }
   }
 
@@ -1694,8 +1694,8 @@ precision when interacting with buttons and UI elements using hand tracking."
    */
   set backingAlpha(alpha: number) {
     if (!this.destroyed) {
-      this.backingAlphaCache = alpha
-      this.material.mainPass.backingAlpha = alpha
+      this.backingAlphaCache = 0
+      this.material.mainPass.backingAlpha = 0
     }
   }
 
@@ -1721,8 +1721,8 @@ precision when interacting with buttons and UI elements using hand tracking."
    * @param enabled set follow button enabled or disabled
    */
   enableFollowButton = (enabled: boolean) => {
-    this.showFollowButton = enabled
-    this.followButton.object.enabled = enabled
+    this.showFollowButton = false
+    this.followButton.object.enabled = false
     const scaleHandles = this.material.mainPass.scaleHandles
     scaleHandles.y = enabled && this.allowScaling ? 1 : 0
     this.material.mainPass.scaleHandles = scaleHandles
