@@ -1,7 +1,7 @@
-- !<ObjectPrefab/a091af48-c6d4-431a-9415-790e0f629a5a>
+- !<ObjectPrefab/28adb231-3927-497f-895d-c7777fe3e3b3>
   PackagePath: ""
   objects:
-    - !<own> 536c3aa2-30d4-46af-95b3-f8976c8ac76a
+    - !<own> c7f74d24-4fc8-44dc-9a7c-a675daffcc60
   LazyLoading: false
   RetainAssets: true
 - !<RenderMeshVisual/1bfbe302-1bd7-4536-8c75-ac76d8c3aa3a>
@@ -91,7 +91,7 @@
     {}
   ScriptInputs:
     "":
-      manipulateRootSceneObject: !<reference.SceneObject> 536c3aa2-30d4-46af-95b3-f8976c8ac76a
+      manipulateRootSceneObject: !<reference.SceneObject> c7f74d24-4fc8-44dc-9a7c-a675daffcc60
       minimumScaleFactor: 0.250000
       maximumScaleFactor: !<float> 20.000000
       enableTranslation: true
@@ -115,7 +115,22 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/73012dc3-15e8-4cb5-87ae-d68099833699>
+- !<SceneObject/5cab25f9-af0d-49d3-aac1-ad06f5e18b80>
+  PrefabRemaps:
+    []
+  Name: Feather
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -180.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d6f66fe0-33a3-4ba5-9603-dbaf883148b1
+  Components:
+    []
+- !<ScriptComponent/7538d0bb-1e18-49c1-9960-3ec7ab6b3249>
   PrefabRemaps:
     []
   Name: IsIngredient
@@ -131,25 +146,45 @@
   ScriptTypes:
     "":
       {}
-- !<ColliderComponent/80d4b723-6727-4e41-9b1f-7f6e8c8286aa>
+- !<ScriptComponent/831acd05-6190-464b-9f9d-3e5e1db7ecde>
   PrefabRemaps:
     []
-  Name: Physics Collider
+  Name: InteractableSquishFeedback
   Enabled: true
-  Shape: !<Sphere>
-    FitVisual: false
-    Radius: 12.000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-- !<ScriptComponent/a728ee4b-d664-4e69-aa80-ad922a1976a9>
+  ScriptAsset: !<reference> d9bba843-83a8-4a84-8c42-942606337fb1
+  ScriptInputsDefault:
+    horizontalSquish: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      squishObject: !<reference.SceneObject> c7f74d24-4fc8-44dc-9a7c-a675daffcc60
+      verticalSquish: 0.850000
+      horizontalSquish: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/96ca52ec-71ba-4479-8fd3-43a38357cfd7>
+  PrefabRemaps:
+    []
+  Name: Object_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 958f2098-b917-4596-b69e-c036bdad1d38
+  Mesh: !<reference> 2c388550-4cbc-4ba3-b19e-1f939b53500b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/a250ad0b-dfbc-4cdf-8e09-a4f0df80619f>
   PrefabRemaps:
     []
   Name: Interactable
@@ -181,7 +216,44 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/b63600fc-9b80-47e2-b9e1-c70c07fd61c1>
+- !<ColliderComponent/b00cf9f0-0108-49d4-a43b-f8b42b6307fd>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: false
+    Radius: 12.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+- !<SceneObject/c7f74d24-4fc8-44dc-9a7c-a675daffcc60>
+  PrefabRemaps:
+    []
+  Name: "Ingredient[Feather]"
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -90.000000, z: 0.000000}
+    scale: {x: 0.500000, y: 0.500000, z: 0.500000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5cab25f9-af0d-49d3-aac1-ad06f5e18b80
+  Components:
+    - !<own> b00cf9f0-0108-49d4-a43b-f8b42b6307fd
+    - !<own> a250ad0b-dfbc-4cdf-8e09-a4f0df80619f
+    - !<own> 2a9f1380-704c-4fa6-a2ed-098a576fe684
+    - !<own> 831acd05-6190-464b-9f9d-3e5e1db7ecde
+    - !<own> 7538d0bb-1e18-49c1-9960-3ec7ab6b3249
+- !<SceneObject/d6f66fe0-33a3-4ba5-9603-dbaf883148b1>
   PrefabRemaps:
     []
   Name: Object_8
@@ -195,19 +267,4 @@
   Children:
     []
   Components:
-    - !<own> 1bfbe302-1bd7-4536-8c75-ac76d8c3aa3a
-- !<SceneObject/f68e0016-8757-4932-8fc7-5c891d9ecc96>
-  PrefabRemaps:
-    []
-  Name: Feather
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -180.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> b63600fc-9b80-47e2-b9e1-c70c07fd61c1
-  Components:
-    []
+    - !<own> 96ca52ec-71ba-4479-8fd3-43a38357cfd7

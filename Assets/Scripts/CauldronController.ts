@@ -20,6 +20,15 @@ export class CauldronController extends BaseScriptComponent {
     @input()
     ingredient3Counter: Text;
 
+    @input()
+    ingredient1Max: number = 3;
+
+    @input()
+    ingredient2Max: number = 3;
+
+    @input()
+    ingredient3Max: number = 3;
+
     // sync kit
     sessionController: SessionController = SessionController.getInstance();
     syncEntity: SyncEntity;
@@ -129,17 +138,38 @@ export class CauldronController extends BaseScriptComponent {
     }
 
     setIngredient1Counter(newVal: number, oldVal: number) {
-        const ingredientName = this.acceptedIngredientNames[0];
-        this.ingredient1Counter.text = `${ingredientName}: ${newVal}`;
+        // const ingredientName = this.acceptedIngredientNames[0];
+        // this.ingredient1Counter.text = `${ingredientName}: ${newVal}`;
+
+        if (newVal >= this.ingredient1Max) {
+            this.ingredient1Counter.text = `Complete!`;
+        }
+        else {
+            this.ingredient1Counter.text = `${newVal}/${this.ingredient1Max}`;
+        }
     }
 
     setIngredient2Counter(newVal: number, oldVal: number) {
-        const ingredientName = this.acceptedIngredientNames[1];
-        this.ingredient2Counter.text = `${ingredientName}: ${newVal}`;
+        // const ingredientName = this.acceptedIngredientNames[1];
+        // this.ingredient2Counter.text = `${ingredientName}: ${newVal}`;
+
+        if (newVal >= this.ingredient2Max) {
+            this.ingredient2Counter.text = `Complete!`;
+        }
+        else {
+            this.ingredient2Counter.text = `${newVal}/${this.ingredient2Max}`;
+        }
     }
 
     setIngredient3Counter(newVal: number, oldVal: number) {
-        const ingredientName = this.acceptedIngredientNames[2];
-        this.ingredient3Counter.text = `${ingredientName}: ${newVal}`;
+        // const ingredientName = this.acceptedIngredientNames[2];
+        // this.ingredient3Counter.text = `${ingredientName}: ${newVal}`;
+
+        if (newVal >= this.ingredient3Max) {
+            this.ingredient3Counter.text = `Complete!`;
+        }
+        else {
+            this.ingredient3Counter.text = `${newVal}/${this.ingredient3Max}`;
+        }
     }
 } 
