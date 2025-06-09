@@ -1,0 +1,79 @@
+- !<AssetImportMetadata/5e624094-6997-4cb9-9ca7-5f740bca0d59>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 7d0598e1-1194-4925-a548-3a56183fd62a
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 7d0598e1-1194-4925-a548-3a56183fd62a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 86e42cc9-98a8-4f7b-abb2-a3feaf85aefe
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/0bf55051-81ae-4847-a08f-db982252f83b>
+  PrefabRemaps:
+    []
+  Name: Object_8
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 75e29fe4-08c6-441d-ae49-121ceac67829
+- !<ObjectPrefab/56bee89e-89db-408b-a2dc-f7680a72dd93>
+  PackagePath: ""
+  objects:
+    - !<own> 874e421d-e079-4536-80ad-205a1cc79799
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/75e29fe4-08c6-441d-ae49-121ceac67829>
+  PrefabRemaps:
+    []
+  Name: Object_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 958f2098-b917-4596-b69e-c036bdad1d38
+  Mesh: !<reference> 2c388550-4cbc-4ba3-b19e-1f939b53500b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefabAssetData/86e42cc9-98a8-4f7b-abb2-a3feaf85aefe>
+  SourceRemaps:
+    - 0601f949-cec7-4044-a485-3ce1429532d9: 874e421d-e079-4536-80ad-205a1cc79799
+    - 2daae378-676f-441c-918c-4bd2ec4e3352: 75e29fe4-08c6-441d-ae49-121ceac67829
+    - 7d0598e1-1194-4925-a548-3a56183fd62a: 56bee89e-89db-408b-a2dc-f7680a72dd93
+    - 9706929c-8a29-46dc-b54c-9f0a6e179193: 0bf55051-81ae-4847-a08f-db982252f83b
+  SourceState: !<own> 56bee89e-89db-408b-a2dc-f7680a72dd93
+- !<SceneObject/874e421d-e079-4536-80ad-205a1cc79799>
+  PrefabRemaps:
+    []
+  Name: fairy feather_2
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 71.472183, y: 0.407028, z: -0.833082}
+    rotation: {x: 90.000008, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000031, z: 100.000031}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0bf55051-81ae-4847-a08f-db982252f83b
+  Components:
+    []

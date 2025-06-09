@@ -1,0 +1,56 @@
+- !<ObjectPrefab/7d0598e1-1194-4925-a548-3a56183fd62a>
+  PackagePath: ""
+  objects:
+    - !<own> 0601f949-cec7-4044-a485-3ce1429532d9
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/0601f949-cec7-4044-a485-3ce1429532d9>
+  PrefabRemaps:
+    []
+  Name: fairy feather_2
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 71.472183, y: 0.407028, z: -0.833082}
+    rotation: {x: 90.000008, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000031, z: 100.000031}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9706929c-8a29-46dc-b54c-9f0a6e179193
+  Components:
+    []
+- !<RenderMeshVisual/2daae378-676f-441c-918c-4bd2ec4e3352>
+  PrefabRemaps:
+    []
+  Name: Object_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 958f2098-b917-4596-b69e-c036bdad1d38
+  Mesh: !<reference> 2c388550-4cbc-4ba3-b19e-1f939b53500b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/9706929c-8a29-46dc-b54c-9f0a6e179193>
+  PrefabRemaps:
+    []
+  Name: Object_8
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2daae378-676f-441c-918c-4bd2ec4e3352

@@ -1,0 +1,56 @@
+- !<ObjectPrefab/0e405f9a-a937-4747-8abe-b8db55cd5d74>
+  PackagePath: ""
+  objects:
+    - !<own> 8b5860c9-92e4-422a-8062-f7398235ad54
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/7b4fb478-20c7-418c-a1b0-899e10007140>
+  PrefabRemaps:
+    []
+  Name: Object_6
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a9d87e38-7483-4e64-88e5-0cee6a444edc
+- !<SceneObject/8b5860c9-92e4-422a-8062-f7398235ad54>
+  PrefabRemaps:
+    []
+  Name: sparrow feather_1
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -1.654999, y: 0.145590, z: -0.074554}
+    rotation: {x: 90.000008, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000031, z: 100.000031}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7b4fb478-20c7-418c-a1b0-899e10007140
+  Components:
+    []
+- !<RenderMeshVisual/a9d87e38-7483-4e64-88e5-0cee6a444edc>
+  PrefabRemaps:
+    []
+  Name: Object_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> ce85b55e-f102-4847-bfbf-23aee3f84224
+  Mesh: !<reference> dfa25fcd-4f4b-4887-9def-101de5423b00
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
