@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/ae785b8c-86ee-4b54-84ee-c8a602e102cd>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 148fafd6-f39f-4cd7-b984-55194689a424
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 148fafd6-f39f-4cd7-b984-55194689a424
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d7d73a88-1847-4578-a2cb-d7d8efae2aad
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d7d73a88-1847-4578-a2cb-d7d8efae2aad>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 31dcc365-8667-40a8-9827-ac3483e71959
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    duration: false
+    vfx: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - vfx: !<reference.VFXComponent> 00000000-0000-0000-0000-000000000000
+      duration: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.VFXComponent vfx
+    - // @input float duration
