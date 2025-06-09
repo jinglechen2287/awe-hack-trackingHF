@@ -2,18 +2,20 @@
   ImportedAssetIds:
     .hidden/blinn1: !<reference> 94b395cc-86a3-4b4c-b0d9-519b835193d6
     .hidden/white: !<reference> 8fee23f8-1beb-441b-99c8-0820c723917c
-    0258c62705849e9f: !<reference> 4b6ce688-6807-42c4-ba81-395ef30375c7
-    2028ca51e4a54211: !<reference> d437d942-e221-4bf3-9860-a8c501fe7d24
-    256b55148196edc2: !<reference> f69e9a2e-b752-4c0b-a5e4-7972a91dd757
-    313ee127660cc780: !<reference> 4cbc35f5-9e49-4a80-9928-b267a02de8d3
-    3de12fbb698e3e12: !<reference> d5efa452-a793-4463-9036-e609dd7fdd7a
-    6019cc7cd177f23a: !<reference> cc769638-6a97-4d92-9cde-e939612cb88a
-    78a5d5e4a9c48b3b: !<reference> 6976208f-994b-4ac5-a2cd-2ce163dfafcb
-    7a0dd5cd69df73fa: !<reference> 55611876-7324-434a-845e-8f87916d8896
-    7d031b1eb89d9e21: !<reference> e231ce1a-f64c-46cf-9288-ecef33811027
-    8ddd1e08a312248e: !<reference> fe202b5d-9aa5-436d-9cd8-391448c0fc60
-    9242db805a01f1d0: !<reference> 57e68117-f16a-4c5c-8cb6-8674a12948f8
-    97934bb8752ee1c0: !<reference> 737ed8f4-e7d1-4d14-971e-3d5ae0b8736d
+    0a28d1979726ff87: !<reference> 7aecda7d-677a-44f4-890c-7b19e21fd544
+    21e09e08f4f20ed6: !<reference> a323b199-b6b8-4c8a-b12a-6581e91b4175
+    233fefe2ccdf00b7: !<reference> 07068bc1-17b4-487b-98f6-ec1cb7029196
+    2b74358c7934915e: !<reference> 873c1d0b-7e68-4ec8-9d85-dc6e8bb945d0
+    39c0b5dc553651a3: !<reference> 81c45346-6ef3-4a89-8e09-b9f6966abd69
+    3fd394d9b5bcc23a: !<reference> 357e9a62-2fb7-486a-b9f7-94d48ca65b6a
+    401329f382aafca8: !<reference> c63ed661-5c94-46d2-bb99-b5e1631a2084
+    47a631293d48dad1: !<reference> 750081be-f174-4f3e-bf81-a71cbb690ac8
+    48caee286e4e1234: !<reference> 918f8c5d-fc1b-445d-bfbe-da89cb98f6f1
+    4ba40d20ef2409d2: !<reference> 62862031-ef2e-4953-a5ab-23334c0f6cce
+    63ae350c052c4215: !<reference> a6bfb83a-719c-4c02-a922-56fc9e5419ef
+    66780cf3a4dcb2b8: !<reference> 60e09501-13ae-4ae5-bc7b-f61d46e11621
+    709b66dcde6e563c: !<reference> 425d73d8-3937-4cbe-8b67-7eca5ba6f990
+    77f37b169da51563: !<reference> a5ffe1e4-6f57-4813-87aa-4a8d1496a3c6
     Animations/BaseLayer: !<reference> e223409b-eecb-4a47-bc62-a6ff0dcd88f8
     Materials/blinn1: !<reference> 4b5bc0fe-ae99-477d-8357-02a55a68c9bb
     Materials/blinn1|blinn1|GraphPassInfo: !<reference> 57bb76ec-ffd9-42fb-84d5-ad1bfe5997ce
@@ -29,15 +31,13 @@
     Scene: !<reference> 11b2a828-c4e3-401a-9e89-fa67d8b01412
     Textures/lambert2_Base_Color: !<reference> e5e6973c-83ae-4a52-87d4-4b8bdbe101bb
     Textures/lambert2_Normal_OpenGL: !<reference> 2eef13ed-b206-4f93-95ac-7a875e60b18c
-    a11b12f63042ba85: !<reference> 63b98819-1372-414d-a8e5-040ad756bd5e
-    a3142de742d875ed: !<reference> 111c5fba-8d75-4ddb-9ac0-6b8396b76f2a
-    b6b2fd9d6ba90fd7: !<reference> eba20f4a-527b-4516-9092-376ad66f61ec
-    c5a5979282fe2ffe: !<reference> 0c52ce22-87a6-4da6-8a8c-1c320078ed48
-    c835b681434f6bc2: !<reference> ff2281b1-491a-4a72-a3cc-ac5b0c4a5b8b
-    dc696b043540585f: !<reference> cd21dc7b-0ebc-40a4-af07-cdeeeee5088e
-    e0a319ec951b3855: !<reference> 8b5c97ae-13b2-43c9-8887-46c932387bb0
-    ebd7631dacb29dab: !<reference> d5fcc9a5-dd9c-4e3f-936c-81a450e10d38
-    f6ac8aafc90ec63e: !<reference> 1dbb7141-9bed-4a29-b37d-31e920c0bbdb
+    b94edbec5922d7e7: !<reference> 7d05b00f-2652-48a0-a53c-33d88ff7734f
+    c4227773b5b9d97e: !<reference> ff715037-3370-4a1d-b41f-fd6838c361f3
+    d56449042852f529: !<reference> 1beeb9aa-0f5e-47eb-8770-0439a8fd884d
+    d9b386baf766bbec: !<reference> 37f1201a-5ba6-4141-96d7-a48be862e779
+    dc82bcd547713556: !<reference> f64601c1-6e3f-4f74-8cac-d5b51aedb4aa
+    e70dea2ae3e1e066: !<reference> 407bc255-abb3-4170-8f77-d4f51bda61ad
+    e8946161aca03ca7: !<reference> 75c43874-7f39-4f0e-af9c-9200db9b4033
   ImporterName: FbxImporter
   PrimaryAsset: !<reference> 11b2a828-c4e3-401a-9e89-fa67d8b01412
   PackageType: LegacyPackage

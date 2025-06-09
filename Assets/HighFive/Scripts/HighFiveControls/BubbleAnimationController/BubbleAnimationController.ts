@@ -2,6 +2,8 @@ import {animateToAlpha, setAlpha} from "../../Utils/SharedFunctions"
 import animate from "SpectaclesInteractionKit.lspkg/Utils/animate"
 import {BubbleAnimationControllerInput} from "./BubbleAnimationControllerInput"
 import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
+import { InteractableColorFeedback } from "SpectaclesInteractionKit.lspkg/Components/Helpers/InteractableColorFeedback"
+import { InteractableManipulation } from "SpectaclesInteractionKit.lspkg/Components/Interaction/InteractableManipulation/InteractableManipulation"
 
 // The BubbleAnimationController class manages the animations and visual effects for the bubble
 // that appears during a high-five interaction
@@ -24,11 +26,14 @@ export class BubbleAnimationController {
     this.input.overallBubble.enabled = false
     setAlpha(this.input.wasHighFiveText.getSceneObject(), 0)
     const bubbleInteractable = this.input.overallBubble.getComponent(Interactable.getTypeName());
+    const bubbleInteractableOutlineColorFeedback = this.input.overallBubble.getComponent(InteractableManipulation.getTypeName());
     if (!bubbleInteractable) {
         print('No interactable on bubble')
     }
     bubbleInteractable.onTriggerEnd.add(() => {
         this.pop(() => {})
+        bubbleInteractable.enabled = false;
+        // bubbleInteractableOutlineColorFeedback.enabled = false;
     })
   }
 

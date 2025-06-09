@@ -1,18 +1,17 @@
 - !<AssetImportMetadata/a201243f-f2b1-4b2e-828f-ecc3d1378675>
   ImportedAssetIds:
     .hidden/Crystal: !<reference> 87c98f31-2815-4705-99c9-a04a9098095a
-    08ff1dc116d6046c: !<reference> 77ff81d9-37df-493e-a54e-cc93f2632591
-    0b2bf5ca834b02bb: !<reference> f5f57aad-87d6-40a3-b259-059b6c07b5c6
-    339a9c5dcd329b3b: !<reference> be216c55-1a26-48d8-9198-546d8a1a2455
-    3d523be08495163f: !<reference> 6de48600-2357-4ffa-8b74-e2f6834c9b18
-    41e04b9ce52a79cf: !<reference> ba23edc0-dc77-49df-aafe-fd264d4fc983
-    46ea904e83a5488c: !<reference> bfa393f8-5122-4f0b-8644-21bf0325ff63
-    6219d73ae8e2a78e: !<reference> 5c14bad6-9527-48e9-a2bf-b05503c50095
-    624f6792bd6e379e: !<reference> b5f00f72-c25f-4e5f-8b29-c46b6008e7fd
-    7a0dd5cd69df73fa: !<reference> cde60482-869a-47b5-ae10-77175bfbe8d3
-    804833a8653df712: !<reference> 3e1e6d61-7975-4258-ab60-f1041017c449
-    83437620bbb97154: !<reference> 1a4dde88-943a-448d-8656-9b9d670b9824
-    836554558f1ca498: !<reference> 9f17032a-df6d-4db0-bf02-35b0f8ef160e
+    0025ed9e47ac1ef4: !<reference> 42968747-aa68-482c-a5fd-03e2a2163839
+    08bc5a2bec6c1656: !<reference> 36e84883-1a22-4b69-bc20-32b44f2943f1
+    21c229e24380af83: !<reference> 6d348fc8-9be9-4607-ba24-1a1d3d540459
+    4a3e924fad0e2f27: !<reference> 3415588f-3704-480e-aaa4-d6f13644b051
+    5456cd091e7655cc: !<reference> 1605c4ab-5f86-46a2-937c-6ba519009a63
+    61f924b11125d287: !<reference> 2efaa42d-954b-4502-a009-6a8b8afbddf7
+    66780cf3a4dcb2b8: !<reference> ddeb86f8-73a0-4af2-9249-9633409badb4
+    83eee52e45e3ed24: !<reference> 6b0b171a-0f4a-463f-be19-6b820f63d2f0
+    8498edf607fa87d4: !<reference> 8bf57618-a14a-4b46-b9cd-7fde199c6f17
+    8cc004ff93d4b7dd: !<reference> 7428459e-4d8c-4712-9da8-54654796f30f
+    94d8a2dfb9517452: !<reference> e1f535b7-df1a-480c-9eff-8d7b1c28ad45
     Materials/Crystal: !<reference> bc4d989d-f315-4a0d-a4e8-e6fe22b07f6b
     Materials/Crystal|Crystal|GraphPassInfo: !<reference> 75dbba2a-566e-405d-ad3a-edfd40358ea8
     Materials/Metal: !<reference> de282f29-7268-417f-b120-a1c3832013bf
@@ -34,10 +33,11 @@
     Textures/texture 3: !<reference> cc4797b3-8f4c-4449-bfeb-e6573ef3cbd0
     Textures/texture 6: !<reference> 614ef8f6-5737-4077-98a4-e396be61389e
     Textures/texture 8: !<reference> bc1d923e-ab88-4091-bc77-89c1e198e024
-    d426384b92cd4645: !<reference> bcccd36b-46f2-441d-afc7-0309ae844eb2
-    d55eb647d79a389d: !<reference> a75962b5-6b06-4782-bed1-42d80853f311
-    e3ba463724159245: !<reference> 862f7891-1149-4930-bdfc-177cf78eb6d8
-    e793a0e4c93922c6: !<reference> bbe4a313-495b-4cce-9b75-9791c678c72b
+    aaa46f50ba3e01eb: !<reference> 09247c98-1d4d-414f-aaf7-664ed5989b40
+    b2fe27b712fbba78: !<reference> a2b9aad2-8048-414c-bf2a-f1550574cc97
+    e7b4807ff1764824: !<reference> 3db18acd-8a48-4f82-886d-b1050ab55599
+    f8ce623c4589c86f: !<reference> d05565e6-b783-4fc2-9ea0-32a019d80c56
+    ff7936aad4ab157c: !<reference> 60b72563-e729-45de-b15d-599c58a54801
   ImporterName: GltfImporter
   PrimaryAsset: !<reference> 6847f8cf-6d80-46b9-8deb-d626b752c8d7
   PackageType: LegacyPackage
