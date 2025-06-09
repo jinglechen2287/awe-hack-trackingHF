@@ -31,8 +31,11 @@
     acceptedIngredientNames: false
     cauldronCollider: false
     ingredient1Counter: false
+    ingredient1Max: false
     ingredient2Counter: false
+    ingredient2Max: false
     ingredient3Counter: false
+    ingredient3Max: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -44,6 +47,9 @@
       ingredient1Counter: !<reference.Text> 00000000-0000-0000-0000-000000000000
       ingredient2Counter: !<reference.Text> 00000000-0000-0000-0000-000000000000
       ingredient3Counter: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      ingredient1Max: !<float> 10.000000
+      ingredient2Max: !<float> 3.000000
+      ingredient3Max: !<float> 3.000000
   ScriptTypes:
     -
       {}
@@ -53,3 +59,6 @@
     - // @input Component.Text ingredient1Counter
     - // @input Component.Text ingredient2Counter
     - // @input Component.Text ingredient3Counter
+    - // @input float ingredient1Max = 3
+    - // @input float ingredient2Max = 3
+    - // @input float ingredient3Max = 3
