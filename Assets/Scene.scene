@@ -7906,22 +7906,22 @@
     top: 0.000000
 - !<SceneObject/30aab564-a77e-4a7e-97a9-78df32c8f32c>
   PrefabRemaps:
-    - 282850cd-a7c0-4fd8-abec-c723e954f214: d5117321-532e-493a-b3b5-ecbc9ba549ea
-    - 30aab564-a77e-4a7e-97a9-78df32c8f32c: e8a1962e-c3df-46d2-8b26-f60834637343
-    - 32da0f66-767f-451e-99a0-ae3a171d0250: 86afa0b7-3b6c-414b-967f-e0352da3b39e
-    - 5ee32dc0-db38-4274-aca5-ebae38d06553: 98ce0f59-6166-464b-9644-a3e46d5a23c0
-    - 81a806a9-c105-49c7-92bb-bd031336b665: 83b6aebb-6aff-457e-a735-9d3d96241569
-    - a711c176-2a7c-4956-9683-ae64b801eaad: 41520f58-a179-4d42-a585-c88362110a95
-    - adac36a8-c6f5-4df5-a23f-8d0e9547872c: 744be03c-f155-4de3-bfaa-378b3fa3f46d
-    - b55c13aa-efcc-47fa-bc25-b7b0b8168806: b20886e5-46f5-403e-8c98-8a1d01483948
-    - e355ae7c-e395-404e-88a7-5453c79a044d: 6662fc3a-af79-4f17-b5a9-3e34b286a78f
-    - f6fa851c-9bc6-4cd7-a590-1ba7fa1e4920: 87fb92ac-c5c8-459b-b685-108097176a43
-    - f737ab52-752d-4d56-bec6-87b00a9e85f3: 75b583f8-cd34-4f73-aa1b-a14acc0adf7c
+    - 13990f8b-f21d-41d9-a2c2-563f67b74e0d: 9df9ae3f-8e43-43bd-9338-cf58cb5e675b
+    - 282850cd-a7c0-4fd8-abec-c723e954f214: 966f22d4-3254-4330-bc4a-a8bf1e1e6df7
+    - 30aab564-a77e-4a7e-97a9-78df32c8f32c: ee05b999-5d33-49b4-96da-ed437ec915c4
+    - 435bc3af-1188-4c94-bb6b-39db5effbbff: 3289c429-c43e-4ca6-9acb-b2532241398a
+    - 8b13ef55-8464-467a-b13e-08a275f4999a: 4377ef02-b24d-442d-83be-00ef6a85f019
+    - b55c13aa-efcc-47fa-bc25-b7b0b8168806: 8a09906f-27cd-4471-8bc5-cb4df4f83121
+    - c21c3ef4-9cb5-41a1-9139-ebf1c21f85e2: 0e49501d-7c7d-40ea-8df4-327fe5f15680
+    - e355ae7c-e395-404e-88a7-5453c79a044d: 3a182fe5-fd36-4240-b646-30e521009108
+    - eb082dee-1c13-4f56-b188-c34bde81e827: 9275c181-b5e2-4be2-845e-d1e1a50f4472
+    - f6fa851c-9bc6-4cd7-a590-1ba7fa1e4920: 351d3cd1-b3df-42db-b31b-635c0b30d799
+    - f737ab52-752d-4d56-bec6-87b00a9e85f3: 7192e84e-ffd5-4c0f-a496-d1859aa6326c
   Name: "Ingredient[Gem]"
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 35.477310, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -7929,7 +7929,6 @@
     - !<own> eb082dee-1c13-4f56-b188-c34bde81e827
   Components:
     - !<own> f6fa851c-9bc6-4cd7-a590-1ba7fa1e4920
-    - !<own> adac36a8-c6f5-4df5-a23f-8d0e9547872c
     - !<own> e355ae7c-e395-404e-88a7-5453c79a044d
     - !<own> 282850cd-a7c0-4fd8-abec-c723e954f214
     - !<own> b55c13aa-efcc-47fa-bc25-b7b0b8168806
@@ -19435,22 +19434,33 @@
     - !<own> 37679a3d-f884-4bca-8024-22d56983430f
 - !<SceneObject/7384dcf7-46cd-4a46-b7c0-80583d297f86>
   PrefabRemaps:
-    - 10727f1f-a5ba-4645-988d-7e93bfa39da5: d5117321-532e-493a-b3b5-ecbc9ba549ea
-    - 32da0f66-767f-451e-99a0-ae3a171d0250: 86afa0b7-3b6c-414b-967f-e0352da3b39e
-    - 5ee32dc0-db38-4274-aca5-ebae38d06553: 98ce0f59-6166-464b-9644-a3e46d5a23c0
-    - 5fb04cb3-3ef8-4c0b-bf4c-7e95dd7f5568: 6662fc3a-af79-4f17-b5a9-3e34b286a78f
-    - 7384dcf7-46cd-4a46-b7c0-80583d297f86: e8a1962e-c3df-46d2-8b26-f60834637343
-    - 7c55fd3e-fe10-4f66-872f-8131de173ad9: b20886e5-46f5-403e-8c98-8a1d01483948
-    - 81a806a9-c105-49c7-92bb-bd031336b665: 83b6aebb-6aff-457e-a735-9d3d96241569
-    - a711c176-2a7c-4956-9683-ae64b801eaad: 41520f58-a179-4d42-a585-c88362110a95
-    - be3eea63-8694-41cb-b2ee-1a636f5c9c06: 75b583f8-cd34-4f73-aa1b-a14acc0adf7c
-    - ceacf293-95c9-4071-8562-f4b55ebd3cb3: 744be03c-f155-4de3-bfaa-378b3fa3f46d
-    - eff1bf12-0d3d-4335-86e9-baedc79325d3: 87fb92ac-c5c8-459b-b685-108097176a43
+    - 10727f1f-a5ba-4645-988d-7e93bfa39da5: bea206fb-a027-4919-be87-b3554cc2f3a0
+    - 12782ff6-8642-4344-8154-5552d09b21f1: 77758e46-c5ba-4bee-8adf-e51054eb9864
+    - 4cb8e054-be16-4c50-9d85-442de9b627de: 00ff3daf-6fb9-4d35-8864-5b648003509a
+    - 4d517f93-ce5f-43e2-bcf6-9fe9abfcc898: 4aee89bd-7349-44b3-a226-a34d25054694
+    - 5b0ae1bf-cd07-4808-a0f3-1da661994d13: 444938f9-f2f0-44d3-9a5f-a0a9e1563608
+    - 5fb04cb3-3ef8-4c0b-bf4c-7e95dd7f5568: 1e742c21-948c-461c-8982-570236c40b9e
+    - 628b6d6e-e06c-4ad3-8836-ba6c498f61c3: 972a3917-bf93-42c3-80d8-f1d88c019057
+    - 6ee844e2-31a5-42ae-8a4b-438f536ff23d: f81e4eca-6d68-49b3-a562-10052510c29e
+    - 7384dcf7-46cd-4a46-b7c0-80583d297f86: 8987f517-7aad-413e-8fad-eaf3fb5a4460
+    - 7c55fd3e-fe10-4f66-872f-8131de173ad9: 2fbeb6fc-00ab-4ea4-8491-6355643433e5
+    - 889d835d-bbb5-4fac-a37e-6ea6333b2e4c: 58d0eb78-f15f-4429-8236-b9efc03467dd
+    - ab450c4a-66ac-4eba-8712-471848a8fdd4: 11ecf8f0-3bac-421b-ae2e-9fb7d71af30a
+    - acb35e8f-8ce9-4386-8723-0f9d23b2c81a: 4f6958a3-6679-40c2-94e5-3b4c147b9820
+    - afff092c-694f-40e0-9a75-6744abdf1463: a125e58b-5dd4-4398-9627-f1f83d61c656
+    - b611e19e-c5d6-4183-b9c1-e57b9759c8a6: 35f36ae2-73da-4cf0-994d-4ce538c46066
+    - be3eea63-8694-41cb-b2ee-1a636f5c9c06: e2bc8c90-a851-45c1-89f8-6900d8e5d317
+    - be720b4d-e0bb-4a12-9493-3097c907a5b5: c35ad903-d86c-411e-9465-aac20a920ce0
+    - ddeabecf-4a35-4909-9c40-fdbf1b9b04a3: f96ea429-5af4-41ac-9dba-c1612d7f6068
+    - ee1a35f1-4b5d-44ce-a862-cee3edf5c4a3: a08de0fa-90e3-4e23-a840-e15b6fa244a6
+    - eff1bf12-0d3d-4335-86e9-baedc79325d3: fc65252b-c23a-4d77-8102-a88a117401ef
+    - f04fd555-3c1a-4d5f-8fca-612b44e932cb: 27d15c15-cdc3-44e4-98ba-d54ce29044b4
+    - f29cbc34-e1a7-4d15-a6df-8091c645282e: 21b7d51f-06e8-4d9a-bc47-1fe7167ece9d
   Name: "Ingredient[RedCrystal]"
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 61.308838, y: 35.477310, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -29052,22 +29062,20 @@
     - !<own> f5ea198c-e714-462b-83e2-7e7ba29acf8a
 - !<SceneObject/a652aa57-51c4-4628-8671-63ab1b7bdf02>
   PrefabRemaps:
-    - 2598cba8-500c-4fe2-89d3-e023ba406945: 6662fc3a-af79-4f17-b5a9-3e34b286a78f
-    - 2b54d4a4-72f7-41f1-8fd4-95107f673f14: 87fb92ac-c5c8-459b-b685-108097176a43
-    - 32da0f66-767f-451e-99a0-ae3a171d0250: 86afa0b7-3b6c-414b-967f-e0352da3b39e
-    - 514fd457-7e17-4c02-91f7-331c58e7bbc2: b20886e5-46f5-403e-8c98-8a1d01483948
-    - 5434e2a8-8708-4bba-a2ae-e92d3ffbe75b: 744be03c-f155-4de3-bfaa-378b3fa3f46d
-    - 584a25c2-17c0-4669-ba1a-17a1bb25b5ce: d5117321-532e-493a-b3b5-ecbc9ba549ea
-    - 5ee32dc0-db38-4274-aca5-ebae38d06553: 98ce0f59-6166-464b-9644-a3e46d5a23c0
-    - 81a806a9-c105-49c7-92bb-bd031336b665: 83b6aebb-6aff-457e-a735-9d3d96241569
-    - a652aa57-51c4-4628-8671-63ab1b7bdf02: e8a1962e-c3df-46d2-8b26-f60834637343
-    - a711c176-2a7c-4956-9683-ae64b801eaad: 41520f58-a179-4d42-a585-c88362110a95
-    - fbaa8904-5c7f-4016-bca9-ef60b2414e16: 75b583f8-cd34-4f73-aa1b-a14acc0adf7c
+    - 2598cba8-500c-4fe2-89d3-e023ba406945: a728ee4b-d664-4e69-aa80-ad922a1976a9
+    - 2b54d4a4-72f7-41f1-8fd4-95107f673f14: 80d4b723-6727-4e41-9b1f-7f6e8c8286aa
+    - 514fd457-7e17-4c02-91f7-331c58e7bbc2: 3cdea5a8-f7e9-41a1-a4d0-0cf2da0aae45
+    - 584a25c2-17c0-4669-ba1a-17a1bb25b5ce: 53905293-4d74-469c-aa18-809a5c507862
+    - 6da08a2c-d84e-458c-b7ab-a01f648d036e: b63600fc-9b80-47e2-b9e1-c70c07fd61c1
+    - a652aa57-51c4-4628-8671-63ab1b7bdf02: 536c3aa2-30d4-46af-95b3-f8976c8ac76a
+    - afa010c8-1733-4ee8-ba44-50aed87ca286: f68e0016-8757-4932-8fc7-5c891d9ecc96
+    - bc0498a7-ff36-409f-86a7-6954ead565f7: 1bfbe302-1bd7-4536-8c75-ac76d8c3aa3a
+    - fbaa8904-5c7f-4016-bca9-ef60b2414e16: 73012dc3-15e8-4cb5-87ae-d68099833699
   Name: "Ingredient[Feather]"
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 28.718410, y: 34.537529, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -30650,30 +30658,6 @@
   Components:
     - !<own> 7b198e7c-ca9f-4ca1-b1a4-c0d30b71c511
     - !<own> aaaeae5d-5e2d-4dbf-b84f-9b75613b3f8b
-- !<BodyComponent/adac36a8-c6f5-4df5-a23f-8d0e9547872c>
-  PrefabRemaps:
-    []
-  Name: Physics Body
-  Enabled: true
-  Shape: !<Mesh>
-    Mesh: !<reference> f34d533f-e82f-4a16-b67b-a5c819316c2d
-    Convex: true
-    Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-  Dynamic: false
-  BodySetting: Density
-  BodySettingValue: 1.000000
-  Damping: 0.000000
-  AngularDamping: 0.000000
 - !<SceneObject/add828d3-47ce-48d9-9550-afce93454940>
   PrefabRemaps:
     []
@@ -33623,7 +33607,7 @@
     {}
   ScriptInputs:
     "":
-      ingredientName: Feather
+      ingredientName: RedCrystal
   ScriptTypes:
     "":
       {}
@@ -45251,7 +45235,7 @@
     {}
   ScriptInputs:
     "":
-      ingredientName: Feather
+      ingredientName: Gem
   ScriptTypes:
     "":
       {}
