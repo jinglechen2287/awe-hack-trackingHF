@@ -1,5 +1,5 @@
 - !<ObjectPrefab/ec2468b5-579f-4ab3-a167-7049be7ad050>
-  PackagePath: Confetti__PLACE_IN_OBJECTS_PANEL
+  PackagePath: ""
   objects:
     - !<own> a413833d-66ee-492a-ad1f-1c94ce76e546
   LazyLoading: false

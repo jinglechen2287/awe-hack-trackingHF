@@ -6,7 +6,7 @@
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
-    {}
+    AssetLibraryId: 6q3t8oUU9qolylknHbjjJV
   AssetDataMap:
     VFXGraph: !<own> 43adb1d9-288d-4344-9e1d-fdec81fad843
   DependentFiles:
@@ -23,13 +23,13 @@
       SimulateProperties:
         emissionRadius:
           typeIdx: 1
-          value: 3.000000
+          value: 8.000000
         forceStrength:
           typeIdx: 1
           value: 2.000000
         spread:
           typeIdx: 1
-          value: 0.700000
+          value: 1.000000
         rotationSpeed:
           typeIdx: 1
           value: 0.400000
