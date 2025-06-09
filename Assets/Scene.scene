@@ -7260,14 +7260,14 @@
   Enabled: true
   ScriptAsset: !<reference> d9bba843-83a8-4a84-8c42-942606337fb1
   ScriptInputsDefault:
-    horizontalSquish: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       squishObject: !<reference.SceneObject> 74601f62-6c5b-473d-8029-0ea372f63736
       verticalSquish: 0.850000
-      horizontalSquish: !<float> 1.000000
+      horizontalSquish: 0.850000
   ScriptTypes:
     "":
       {}
@@ -10973,8 +10973,7 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> 54e985e2-74c2-4cc6-b521-a34903276827
-    - !<own> 4d78f005-71e6-44c6-a0be-373c76c41194
+    - !<own> da6f8045-d21d-45b3-b02e-378ebc4404d9
   Components:
     []
 - !<ScriptComponent/42bd9d16-17f2-4fd2-91cf-9b49b88aa6db>
@@ -17933,7 +17932,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -10.000000, z: 5.000000}
+    position: {x: 12.500000, y: -10.000000, z: 5.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 5.000000, y: 5.000000, z: 5.000000}
     hasSegmentScaleCompensation: false
@@ -19691,6 +19690,7 @@
     - !<own> 4b98770d-eefb-411f-9f5d-f593abeb0ae2
     - !<own> 2b55d064-e501-4930-9e94-aa104c218961
     - !<own> 02168af4-b7c4-4237-9943-a89c9e5a186a
+    - !<own> 8453eda8-b052-4f45-95ed-51baefbcb8bc
 - !<SceneObject/74612775-d4f3-4ddc-8471-66fdb0d8bd80>
   PrefabRemaps:
     []
@@ -21747,9 +21747,9 @@
     "":
       cauldronCollider: !<reference.ColliderComponent> f7dcf01a-813c-4754-adcc-e22b7d1a1cfc
       acceptedIngredientNames: !<string[]>
-        - Cake1
-        - Cake2
-        - Cake3
+        - Gem
+        - Feather
+        - RedCrystal
       ingredient1Counter: !<reference.Text> ac9d38e2-04ed-409c-b0f0-9d0eb2038191
       ingredient2Counter: !<reference.Text> b0fe553e-cfeb-4ade-b749-61e0ff4277ae
       ingredient3Counter: !<reference.Text> f35e3f7a-4cdd-426e-a532-18ad51a884f3
@@ -22901,6 +22901,30 @@
     "":
       itemPrefab: !<reference.ObjectPrefab> 626fa2aa-cf28-45b6-beb9-16cdc571a1e7
       itemsCount: !<float> 5.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/8453eda8-b052-4f45-95ed-51baefbcb8bc>
+  PrefabRemaps:
+    []
+  Name: InteractableColorFeedback
+  Enabled: true
+  ScriptAsset: !<reference> ad94751b-0846-4ee3-af41-7b0eb49b2e2c
+  ScriptInputsDefault:
+    defaultColor: true
+    hoverColor: true
+    pinchedColor: true
+    disabledColor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      defaultColor: !<Vec4> {x: 0.280000, y: 0.280000, z: 0.280000, w: 1.000000}
+      hoverColor: !<Vec4> {x: 0.280000, y: 0.280000, z: 0.280000, w: 1.000000}
+      pinchedColor: !<Vec4> {x: 0.460000, y: 0.460000, z: 0.460000, w: 1.000000}
+      disabledColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.000000}
+      meshVisuals: !<reference.RenderMeshVisual[]>
+        - !<reference> 8b13ef55-8464-467a-b13e-08a275f4999a
   ScriptTypes:
     "":
       {}
@@ -24845,7 +24869,7 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 28
+  FontSize: 20
   Font: !<reference> 00000000-0000-0000-0000-000000000000
   LayoutRect:
     left: -7.500000
@@ -29226,7 +29250,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -25.000000, y: -10.000000, z: 5.000000}
+    position: {x: -12.500000, y: -10.000000, z: 5.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 5.000000, y: 5.000000, z: 5.000000}
     hasSegmentScaleCompensation: false
@@ -32361,7 +32385,7 @@
   PrefabRemaps:
     []
   Name: InteractableOutlineFeedback
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 8cffcc93-959a-469f-abe1-6c5eeeafa825
   ScriptInputsDefault:
     targetOutlineMaterial: true
@@ -38383,6 +38407,22 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
+- !<SceneObject/da6f8045-d21d-45b3-b02e-378ebc4404d9>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 12.000000, y: 5.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.500000, y: 1.500000, z: 1.500000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 54e985e2-74c2-4cc6-b521-a34903276827
+    - !<own> 4d78f005-71e6-44c6-a0be-373c76c41194
+  Components:
+    - !<own> f15d8fb5-9533-4d8c-a86b-4290374924ed
 - !<ScriptComponent/daa08500-cf3a-4a32-a01b-139d96d22204>
   PrefabRemaps:
     []
@@ -40599,7 +40639,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Potion Name
+  Text: Red Panda
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -40864,7 +40904,6 @@
   Enabled: true
   ScriptAsset: !<reference> 87d3579d-2a43-4a24-a66e-553fe2f5b210
   ScriptInputsDefault:
-    manipulateRootSceneObject: true
     minimumScaleFactor: true
     maximumScaleFactor: true
     enableTranslation: true
@@ -40889,7 +40928,7 @@
     {}
   ScriptInputs:
     "":
-      manipulateRootSceneObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      manipulateRootSceneObject: !<reference.SceneObject> b438af9e-ddaf-4fd1-8d47-e944a517216c
       minimumScaleFactor: 0.250000
       maximumScaleFactor: !<float> 20.000000
       enableTranslation: true
@@ -43085,9 +43124,9 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |+
-    Potions
-    
+  Text: |
+    Effects
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -44198,6 +44237,18 @@
   ScriptTypes:
     "":
       {}
+- !<Canvas/f15d8fb5-9533-4d8c-a86b-4290374924ed>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  UnitType: World
+  SortingType: Hierarchy
+  WorldSpaceRect:
+    left: -15.000000
+    bottom: -25.000000
+    right: 15.000000
+    top: 25.000000
 - !<Canvas/f15f1000-2664-4196-a998-26bf97811f72>
   PrefabRemaps:
     []
