@@ -44,8 +44,8 @@ export class MenuManager extends BaseScriptComponent {
   @input activeButtonMaterials: Material[];
 
   private allAvailableQuests: Quest[] = [
-    new Quest('Quest1', 1, 'reward1'),
-    new Quest('Quest2', 1, 'reward2'),
+    new Quest('Quest123', 1, 'reward1'),
+    new Quest('Quest234', 1, 'reward2'),
     new Quest('Quest3', 1, 'reward3'),
     new Quest('Quest4', 1, 'reward4'),
     new Quest('Quest5', 1, 'reward5'),
@@ -179,6 +179,11 @@ export class MenuManager extends BaseScriptComponent {
 
   public deactivateQuest(n: number){
     this.questButtons[n].enabled = false;
+  }
+
+  public getCauldronQuests() {
+    this.activateQuest(0);
+    this.activateQuest(1);
   }
 
   public quitQuest(){

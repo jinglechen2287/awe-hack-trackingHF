@@ -12482,7 +12482,7 @@
     - 4bbb3f43-160f-48e3-91f4-6d33efe7a3f2: a413833d-66ee-492a-ad1f-1c94ce76e546
     - b3a7f5be-5754-43b1-9812-2a109eb418d3: 0ad26675-fda3-478a-a1ea-46b0d8666989
   Name: Confetti__PLACE_IN_OBJECTS_PANEL
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: -0.000002, y: 90.000000, z: 0.000000}
@@ -33881,17 +33881,15 @@
   Enabled: true
   ScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
   ScriptInputsDefault:
-    editEventCallbacks: true
-    customFunctionForOnButtonPinched: true
-    onButtonPinchedFunctionNames: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      editEventCallbacks: false
-      customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      editEventCallbacks: true
+      customFunctionForOnButtonPinched: !<reference.ScriptComponent> 9537e6c1-75c3-452b-815c-8a67722c14e6
       onButtonPinchedFunctionNames: !<string[]>
-        []
+        - getCauldronQuests
   ScriptTypes:
     "":
       {}
@@ -38326,9 +38324,9 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |+
+  Text: |
     View
-    
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
