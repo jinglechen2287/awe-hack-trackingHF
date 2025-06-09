@@ -24,16 +24,16 @@ metaInfo:
     []
   tags:
     []
-  lensName: HighFive
+  lensName: Cauldron
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 0bef289e57b9055eb5f1f2f6bf580f4e
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.3.0.24111410
