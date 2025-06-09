@@ -2676,6 +2676,7 @@
     warningQuestMenu: true
     quitQuestButton: true
     continueQuestButton: true
+    noQuestText: true
     idleButtonMaterials: true
     activeButtonMaterials: true
   ScriptTypesDefault:
@@ -2696,6 +2697,7 @@
       warningQuestMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       quitQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       continueQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      noQuestText: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       idleButtonMaterials: !<reference.Material[]>
         []
       activeButtonMaterials: !<reference.Material[]>

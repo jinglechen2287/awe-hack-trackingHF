@@ -47,7 +47,8 @@
   AssetDataMap:
     Scene: !<own> acde784f-52d9-49a6-bd82-908a412d0568
   DependentFiles:
-    []
+    - lambert2_Base_Color.png
+    - lambert2_Normal_OpenGL.png
   ImporterSettings: !<FbxImporterSettings>
     UseLegacyImporter: false
     WithMaterials: true

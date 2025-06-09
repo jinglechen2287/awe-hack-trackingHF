@@ -34,6 +34,7 @@
     idleButtonMaterials: false
     ingredientButton: false
     ingredientMenu: false
+    noQuestText: false
     potionButton: false
     potionMenu: false
     questButton: false
@@ -61,6 +62,7 @@
       warningQuestMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       quitQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       continueQuestButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      noQuestText: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       idleButtonMaterials: !<reference.Material[]>
         []
       activeButtonMaterials: !<reference.Material[]>
@@ -81,5 +83,6 @@
     - // @input SceneObject warningQuestMenu
     - // @input SceneObject quitQuestButton
     - // @input SceneObject continueQuestButton
+    - // @input SceneObject noQuestText
     - "// @input Asset.Material[] idleButtonMaterials"
     - "// @input Asset.Material[] activeButtonMaterials"

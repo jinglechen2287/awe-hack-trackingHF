@@ -37,6 +37,9 @@ export class MenuManager extends BaseScriptComponent {
   @input
   continueQuestButton: SceneObject;
 
+  @input
+  noQuestText: SceneObject;
+
   @input idleButtonMaterials: Material[];
   @input activeButtonMaterials: Material[];
 
@@ -167,6 +170,15 @@ export class MenuManager extends BaseScriptComponent {
 
     // Show quest menu by default
     this.setQuestMenuActive();
+  }
+
+  public activateQuest(n: number){
+    this.questButtons[n].enabled = true;
+    this.noQuestText.enabled = false;
+  }
+
+  public deactivateQuest(n: number){
+    this.questButtons[n].enabled = false;
   }
 
   public quitQuest(){
