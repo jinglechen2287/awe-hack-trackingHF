@@ -33,9 +33,9 @@ export class CauldronController extends BaseScriptComponent {
     sessionController: SessionController = SessionController.getInstance();
     syncEntity: SyncEntity;
 
-    private ingredient1Prop = StorageProperty.manualInt("ingredient1", 0);
-    private ingredient2Prop = StorageProperty.manualInt("ingredient2", 0);
-    private ingredient3Prop = StorageProperty.manualInt("ingredient3", 0);
+    private ingredient1Prop = StorageProperty.manualInt("ingredient1", 3);
+    private ingredient2Prop = StorageProperty.manualInt("ingredient2", 2);
+    private ingredient3Prop = StorageProperty.manualInt("ingredient3", 3);
 
 
     onAwake() {

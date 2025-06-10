@@ -51,7 +51,7 @@ export class AppStateSync {
     const data: RealtimeStoreKeys.APP_STATE_DATA = {
       connectionID:
         SessionController.getInstance().getLocalUserInfo().connectionId,
-      questText: "",
+      questText: "No Quest Active",
       showEffect: false,
       hasActiveQuest: false,
     };
@@ -71,7 +71,7 @@ export class AppStateSync {
 
   updateQuestMsg(text: string) {
     if (this._lastUpdatedData) {
-      const hasActiveQuest = text === "" ? false : true;
+      const hasActiveQuest = text === "No Quest Active" ? false : true;
       const data: RealtimeStoreKeys.APP_STATE_DATA = {
         connectionID:
           SessionController.getInstance().getLocalUserInfo().connectionId,

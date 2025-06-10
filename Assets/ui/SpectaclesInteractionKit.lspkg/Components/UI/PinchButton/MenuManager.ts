@@ -44,11 +44,11 @@ export class MenuManager extends BaseScriptComponent {
   @input activeButtonMaterials: Material[];
 
   private allAvailableQuests: Quest[] = [
-    new Quest('Spark of Curiosity', 1, 'Gem'),
-    new Quest('Wisdom Exchange', 1, 'Gem'),
-    new Quest('Quest3', 1, 'reward3'),
-    new Quest('Quest4', 1, 'reward4'),
-    new Quest('Quest5', 1, 'reward5'),
+    new Quest('Spark of Curiosity', 1, "What's your must see session?", 'Gem'),
+    new Quest('Wisdom Exchange', 1, "What's your must see session?", 'Gem'),
+    new Quest('Quest3', 1, "What's your must see session?", 'Gem'),
+    new Quest('Quest4', 1, "What's your must see session?", 'Gem'),
+    new Quest('Quest5', 1, "What's your must see session?", 'Gem'),
   ];
 
   public activeQuest = -1;

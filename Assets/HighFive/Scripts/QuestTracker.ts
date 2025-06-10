@@ -4,15 +4,17 @@ export class Quest {
   private readonly _name: string;
   private readonly _goal: number;
   private readonly _reward: string; // Might need a reward object?
+  private readonly _description: string;
   private _approvals: string[];
   private _status: Status;
 
-  constructor(name: string, numOfApproval: number, reward?: string) {
+  constructor(name: string, numOfApproval: number, description: string, reward?: string) {
     this._name = name;
     this._goal = numOfApproval;
     this._approvals = [];
     this._status = "idle";
     this._reward = reward ?? 'none';
+    this._description = description;
   }
 
   get name(): string {
@@ -37,6 +39,10 @@ export class Quest {
 
   get reward(): string {
     return this._reward;
+  }
+
+  get description(): string {
+    return this._description;
   }
 
   set status(newStatus: Status) {
@@ -85,7 +91,7 @@ private updateAppStateMsg: (text: string) => void
 
   updateText(hasActiveQuest: boolean): void {
     if(hasActiveQuest) {
-        this.updateAppStateMsg(`${this.activeQuest.name} (${this.activeQuest.numOfApproval} / ${this.activeQuest.goal})`)
+        this.updateAppStateMsg(`${this.activeQuest.description} (${this.activeQuest.numOfApproval} / ${this.activeQuest.goal})`)
     } else {
         // this.questHint.enabled = false;
         this.updateAppStateMsg('')
