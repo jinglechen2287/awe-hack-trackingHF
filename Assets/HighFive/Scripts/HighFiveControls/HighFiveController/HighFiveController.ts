@@ -8,6 +8,7 @@ import { SessionController } from "SpectaclesSyncKit.lspkg/Core/SessionControlle
 
 import { QuestSystem } from "../../QuestTracker";
 
+let success  = false;
 // The HighFiveController class is responsible for detecting and handling virtual high-five
 // interactions between users in a real-time environment.
 // It tracks the hand positions of the current user and their friends,
@@ -152,7 +153,7 @@ export class HighFiveController {
       }
       const friendHandPos: vec3 = this.getUserHandPosition(friend);
       lastDist = friendHandPos.distance(currentUserHandPos);
-      if (friendHandPos.distance(currentUserHandPos) < 10) {
+      if (friendHandPos.distance(currentUserHandPos) < 100) {
         let friendName: string = "";
         SessionController.getInstance()
           .getSession()

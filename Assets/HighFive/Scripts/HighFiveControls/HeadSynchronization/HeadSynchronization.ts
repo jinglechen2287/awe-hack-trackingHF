@@ -3,6 +3,7 @@ import {RealtimeStoreKeys} from "../SyncControls/RealtimeStoreKeys"
 import {SessionController} from "SpectaclesSyncKit.lspkg/Core/SessionController"
 import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
 
+
 // The HeadSynchronization class synchronizes the position of a virtual headBox with the user's head/camera movements in real time.
 // It tracks the head's movements, updates the headBox's position accordingly within the scene,
 // and handles events triggered by changes in head positioning.

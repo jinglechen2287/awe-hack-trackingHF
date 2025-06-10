@@ -91,10 +91,10 @@ private updateAppStateMsg: (text: string) => void
 
   updateText(hasActiveQuest: boolean): void {
     if(hasActiveQuest) {
-        this.updateAppStateMsg(`${this.activeQuest.description} (${this.activeQuest.numOfApproval} / ${this.activeQuest.goal})`)
+        this.updateAppStateMsg(`${this.activeQuest.description}`)
     } else {
         // this.questHint.enabled = false;
-        this.updateAppStateMsg('')
+        this.updateAppStateMsg('No Quest Active')
     }
   }
 
