@@ -18,6 +18,7 @@
     - !<own> 30aab564-a77e-4a7e-97a9-78df32c8f32c
     - !<own> 7384dcf7-46cd-4a46-b7c0-80583d297f86
     - !<own> 24964a0e-0437-4ac5-8985-08c9fee6ba1d
+    - !<own> 356f0c95-daf3-4cdd-a43c-e64c5549af06
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - |
@@ -2770,6 +2771,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/0fc38053-84a5-4bdb-a230-ee394a8d4159>
+  PrefabRemaps:
+    []
+  Name: Custom Location Render Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f0ed16d8-08c3-47c4-917e-18a07f35ba31
 - !<ColliderComponent/100d6f98-edd3-4c7d-87e5-39447c591931>
   PrefabRemaps:
     []
@@ -8467,6 +8483,22 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
+- !<ScriptComponent/31dce41b-6291-4aec-ba62-82e7900fdb8e>
+  PrefabRemaps:
+    []
+  Name: FrontCameraMirror
+  Enabled: true
+  ScriptAsset: !<reference> 4b4f1640-4f6e-4a03-ba16-890740d81236
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<ScreenTransform/325f3345-eb62-49fc-9097-62dc5048202c>
   PrefabRemaps:
     []
@@ -9003,6 +9035,21 @@
     - !<own> 0684e274-aa58-470b-b5f4-62aca52633cc
   Components:
     []
+- !<SceneObject/356f0c95-daf3-4cdd-a43c-e64c5549af06>
+  PrefabRemaps:
+    []
+  Name: "Custom Location [Judge]"
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> f7cc8232-09e0-4571-b1e3-4f758540ff83
+  Components:
+    - !<own> 7e50961c-784e-4e64-bcd2-a2ef5965d30c
 - !<SceneObject/35915fa0-85fb-44a5-af9a-45ef1423c551>
   PrefabRemaps:
     []
@@ -19420,8 +19467,8 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -114.353401, y: -127.013390, z: -251.467529}
-    rotation: {x: 0.000000, y: 20.767887, z: 0.000000}
+    position: {x: -233.502197, y: -127.013390, z: -20.273804}
+    rotation: {x: 0.000000, y: -43.859608, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -21988,6 +22035,13 @@
   ScriptTypes:
     "":
       {}
+- !<LocatedAtComponent/7e50961c-784e-4e64-bcd2-a2ef5965d30c>
+  PrefabRemaps:
+    []
+  Name: Located At
+  Enabled: true
+  Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+  Location: !<reference> c61d0c0a-2688-4782-9779-9a2adb484720
 - !<SceneObject/7e9d9092-8448-45b5-ab75-de3c7b91b3a5>
   PrefabRemaps:
     []
@@ -44774,6 +44828,26 @@
   Components:
     - !<own> 996e8bb6-c29b-4dce-b7b7-3697a9400964
     - !<own> b0dc64aa-1374-46d4-90c4-be5efad9dc1b
+- !<RenderMeshVisual/f0ed16d8-08c3-47c4-917e-18a07f35ba31>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 1ff00399-ca3a-4437-a2cd-62ec936211f4
+  Mesh: !<reference> 6c4f7fae-4670-4647-83cf-727082a6df7f
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<Canvas/f0f59735-3acd-4b74-9183-4228e164049b>
   PrefabRemaps:
     []
@@ -46005,6 +46079,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/f7cc8232-09e0-4571-b1e3-4f758540ff83>
+  PrefabRemaps:
+    []
+  Name: Flip camera controller
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0fc38053-84a5-4bdb-a230-ee394a8d4159
+  Components:
+    - !<own> 31dce41b-6291-4aec-ba62-82e7900fdb8e
 - !<ColliderComponent/f7dcf01a-813c-4754-adcc-e22b7d1a1cfc>
   PrefabRemaps:
     []
